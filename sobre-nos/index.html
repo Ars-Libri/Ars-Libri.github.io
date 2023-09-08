@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nós</title>
+    <!-- FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CCS LINKS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS LINKS -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav id="nav-general">
+        <button onclick="closeMenu()">
+            <img src="../assets/home/menu/back-bottom.svg" alt="">
+        </button>
+        <div class="menu">
+            <h3>Menu</h3>
+            <div class="perfil-or-login">
+                <div class="img-perfil">
+                    <img src="../assets/home/menu/shrek.svg" alt="" width="60px">
+                </div>
+                <div class="text">
+                        <p id="welcome">Bem vindo,</p>
+                        <a id="name-user-or-login" href="../login/index.html">Fazer login
+                            <img src="../assets/home/menu/arrow-perfil.svg" alt="">
+                        </a>
+                        <hr>
+                        <p id="see-perfil">Ver meu perfil</p>
+                </div>
+            </div>
+            <!-- <hr>
+            <h2>VER MEU PERFIL 
+                <img src="../assets/home/menu/arrow-perfil.svg" alt="">
+            </h2> -->
+            <a href="../index.html" class="item-menu">
+                <img src="../assets/home/menu/home-icon-white.svg" alt="">
+                Página Inicial</a>
+            <a href="../categorias/index.html" class="item-menu">
+                <img src="../assets/home/menu/cat-icon-white.svg" alt="">
+                Categorias</a>
+            <a href="../comunidade/index.html" class="item-menu">
+                <img src="../assets/home/menu/com-icon-white.svg" alt="">
+                Comunidade</a>
+            <a href="../chronos/index.html" class="item-menu">
+                <img src="../assets/home/menu/rolex-icon-white.svg" alt="">
+                Chronos</a>
+            <a href="./index.html" class="item-menu" style="background-color: var(--secondary-color-gold); color: var(--back-color-default);">
+                <img src="../assets/home/menu/info-icon-black.svg" alt="">
+                Sobre nós</a>
+            <a href="../ajuda/index.html" class="item-menu">
+                <img src="../assets/home/menu/help-icon-white.svg" alt="">
+                Ajuda</a>
+        </div>
+    </nav>
+    <header id="header-page" class="hidden">
+        <div class="header-top" id="header-top">
+            <button onclick="openMenu()" aria-label="Botão que da acesso ao menu da página">
+                <svg width="41" height="22" viewBox="0 0 41 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="41" height="3.90653" fill="#D9D9D9"/>
+                    <rect y="8.37115" width="41" height="3.90653" fill="#D9D9D9"/>
+                    <rect y="17.3004" width="41" height="3.90653" fill="#D9D9D9"/>
+                </svg>
+            </button>
+            <a href="../pesquisa/" aria-label="Link com icone de pesquisa para dar acesso a aba de pesquisa do site">
+                <svg width="46" height="41" viewBox="0 0 46 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18.6103" cy="18.6103" r="18.6103" fill="#D9D9D9"/>
+                    <circle cx="18.6103" cy="18.6103" r="14.8882" fill="#151515"/>
+                    <rect x="21.8085" y="18.6103" width="29.7764" height="5.21087" rx="2.60544" transform="rotate(37.8625 21.8085 18.6103)" fill="#D9D9D9"/>
+                </svg>
+            </a>
+        </div>
+        <div class="header-main" id="header-main">
+            <div class="texts" id="texts">
+                <div class="elipse hidden" id="elipse"></div>
+                <h1>ARS LIBRI</h1>
+                <h2>ALL IN ONE</h2>
+            </div>
+        </div>
+        <div class="header-bottom" id="header-bottom">
+            <svg aria-label="seta para baixo indicando que há mais conteúdo" width="24" height="53" viewBox="0 0 24 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.9393 52.0607C11.5251 52.6464 12.4749 52.6464 13.0607 52.0607L22.6066 42.5147C23.1924 41.9289 23.1924 40.9792 22.6066 40.3934C22.0208 39.8076 21.0711 39.8076 20.4853 40.3934L12 48.8787L3.51472 40.3934C2.92893 39.8076 1.97919 39.8076 1.3934 40.3934C0.807611 40.9792 0.807611 41.9289 1.3934 42.5147L10.9393 52.0607ZM10.5 0L10.5 51H13.5L13.5 0L10.5 0Z" fill="white"/>
+            </svg>
+            <svg aria-label="seta para baixo indicando que há mais conteúdo" width="24" height="53" viewBox="0 0 24 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.9393 52.0607C11.5251 52.6464 12.4749 52.6464 13.0607 52.0607L22.6066 42.5147C23.1924 41.9289 23.1924 40.9792 22.6066 40.3934C22.0208 39.8076 21.0711 39.8076 20.4853 40.3934L12 48.8787L3.51472 40.3934C2.92893 39.8076 1.97919 39.8076 1.3934 40.3934C0.807611 40.9792 0.807611 41.9289 1.3934 42.5147L10.9393 52.0607ZM10.5 0L10.5 51H13.5L13.5 0L10.5 0Z" fill="white"/>
+            </svg>
+        </div>
+    </header>
+    <main id="main-page" class="hidden">
+        <header>
+            <svg class="hidden" id="linha-1" width="100vw" height="1" viewBox="0 0 100vw 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="-1" y1="0.5" x2="100vw" y2="0.5" stroke="white"/>
+            </svg>
+            <h3>SOBRE NÓS</h3>
+        </header>
+        <div class="card">
+            <p>Nós somos a ARS-LIBRI trabalhando e trazendo cultura junto da acessibilidade para todos.</p>
+            <p>Em todas as épocas e lugares, a cultura humana é refletida nas artes. </p>
+            <p>A arquitetura, que ergue edifícios esplêndidos, transforma o rosto das cidades e demonstra a grandeza do intelecto humano. A música, com a harmonia dos sons e a doçura das melodias, toca os corações das pessoas e evoca as profundezas de suas emoções. </p>
+            <p>A pintura e a escultura, que empregam a luz e a matéria, representam o mundo visível e estimulam os sentidos da alma. </p>
+        </div>
+        <svg id="linha-2" width="100vw" height="1" viewBox="0 0 100vw 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="-1" y1="0.5" x2="100vw" y2="0.5" stroke="white"/>
+        </svg>
+    </main>
+    <img class="hidden" id="img" src="../assets/sobre-nos/homem-vitruviano.png" width="100%" alt="Imagem do Homem Vitruviano, homem de cabelo longo olhando para frente com o corpo também para frente, o homem esta nu e com os braços abertos, além de estar também com as pernas abertas.">
+    <footer id="footer-page" class="hidden">
+        <h2>ARS-LIBRI</h2>
+        <h3>ALL IN ONE</h3>
+    </footer>
+</body>
+</html>

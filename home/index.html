@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ars Libri - Cultura e Acessibilidade</title>
+
+    <!-- FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- CDN FONTS -->
+    <link href="https://fonts.cdnfonts.com/css/digital-numbers" rel="stylesheet">
+
+    <!-- CCS LINKS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <nav id="nav-general">
+        <button onclick="closeMenu()">
+            <img src="assets/home/menu/back-bottom.svg" alt="">
+        </button>
+        <div class="menu">
+            <h3>Menu</h3>
+            <div class="perfil-or-login">
+                <div class="img-perfil">
+                    <img src="assets/home/menu/shrek.svg" alt="" width="60px">
+                </div>
+                <div class="text">
+                        <p id="welcome">Bem vindo,</p>
+                        <a id="name-user-or-login" href="./login/">Fazer login
+                            <img src="assets/home/menu/arrow-perfil.svg" alt="">
+                        </a>
+                        <hr>
+                        <p id="see-perfil">Ver meu perfil</p>
+                </div>
+            </div>
+            <!-- <hr>
+            <h2>VER MEU PERFIL 
+                <img src="assets/home/menu/arrow-perfil.svg" alt="">
+            </h2> -->
+            <a href="./index.html" class="item-menu" style="background-color: var(--secondary-color-gold); color: var(--back-color-default);">
+                <img src="assets/home/menu/home-icon-black.svg" alt="">
+                Página Inicial</a>
+            <a href="./categorias/index.html" class="item-menu">
+                <img src="assets/home/menu/cat-icon-white.svg" alt="">
+                Categorias</a>
+            <a href="" class="item-menu">
+                <img src="assets/home/menu/com-icon-white.svg" alt="">
+                Comunidade</a>
+            <a href="" class="item-menu">
+                <img src="assets/home/menu/rolex-icon-white.svg" alt="">
+                Chronos</a>
+            <a href="sobre-nos/" class="item-menu">
+                <img src="assets/home/menu/info-icon-white.svg" alt="">
+                Sobre nós</a>
+            <a href="" class="item-menu">
+                <img src="assets/home/menu/help-icon-white.svg" alt="">
+                Ajuda</a>
+        </div>
+    </nav>
+    <header id="header-page" class="header hidden" aria-hidden="false">
+        <button aria-label="Botão de 3 barras que da acesso ao menu" onclick="openMenu()">
+            <svg width="41" height="22" viewBox="0 0 41 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="41" height="3.90653" fill="#D9D9D9"/>
+                <rect y="8.37115" width="41" height="3.90653" fill="#D9D9D9"/>
+                <rect y="17.3004" width="41" height="3.90653" fill="#D9D9D9"/>
+            </svg>
+        </button>
+        <a href="./index.html" aria-label="Botão que leva até a página inicial" id="logo-header">
+            <!-- <div class="quadrado-de-fundo" id="quadrado-de-fundo"></div> -->
+            <img src="assets/home/header/logo-ars-libri-modern-golden-whiteback-removebg-preview 1.png" alt="Icone de uma mão que representa a acessibilidade como logo da empresa">
+        </a>
+        <a href="./pesquisa/" aria-label="Link com icone de pesquisa para dar acesso a aba de pesquisa do site" tabindex="0">
+            <svg width="46" height="41" viewBox="0 0 46 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18.6103" cy="18.6103" r="18.6103" fill="#D9D9D9"/>
+                <circle cx="18.6103" cy="18.6103" r="14.8882" fill="#151515"/>
+                <rect x="21.8085" y="18.6103" width="29.7764" height="5.21087" rx="2.60544" transform="rotate(37.8625 21.8085 18.6103)" fill="#D9D9D9"/>
+            </svg>
+        </a>
+        
+    </header>
+    <main id="main-page" class="hidden">
+            <div class="container-slider">
+                <div class="control-buttons hidden">
+                    <button id="prev-button" class="arrow-slide"><img src="./assets/home/slider/setaSlider.png" alt="prev-button"></button>
+                    <button id="next-button" class="arrow-slide"><img src="./assets/home/slider/setaSlider.png" alt="Próxima imagem" width="auto"></button>
+                </div>
+                <div class="container-images">
+                    <div class="radios-slider hidden">
+                        <input class="radio-btn" type="radio" name="radio0" id="radio0" value="0" onclick="radioBtn(0)" tabindex="0">
+                        <input class="radio-btn" type="radio" name="radio1" id="radio1" value="1" onclick="radioBtn(1)">
+                        <input class="radio-btn" type="radio" name="radio2" id="radio2" value="2" onclick="radioBtn(2)">
+                        <input class="radio-btn" type="radio" name="radio3" id="radio3" value="3" onclick="radioBtn(3)">
+                        <input class="radio-btn" type="radio" name="radio4" id="radio4" value="4" onclick="radioBtn(4)">
+                    </div>
+                  <img src="./assets/home/slider/a-medusa-de-caravaggio.png" alt="" class="slider on" width="100%" height="100%">
+                  <img src="./assets/home/slider/os-miseraveis.png" alt="" class="slider" width="100%" height="100%">
+                  <img src="./assets/home/slider/a-medusa-de-caravaggio.png" alt="" class="slider" width="100%" height="100%">
+                  <img src="./assets/home/slider/os-miseraveis.png" alt="" class="slider" width="100%" height="100%">
+                  <img src="./assets/home/slider/a-medusa-de-caravaggio.png" alt="" class="slider" width="100%" height="100%">
+                </div>
+              </div>
+    </main>
+    <section id="section-category" class="hidden">
+        <header>
+            <h2 tabindex="0">Categorias</h2>
+        </header>
+        <div class="category" aria-label="" >
+            <nav>
+                <button id="categoria-1" class="btn-select-category" onclick="colorBtnNav(1)">Literatura</button>
+                <button id="categoria-2" onclick="colorBtnNav(2)">Filosofia</button>
+                <button id="categoria-3" onclick="colorBtnNav(3)">Artes</button>
+                <button id="categoria-4" onclick="colorBtnNav(4)">História</button>
+            </nav>
+        </div>
+        <div class="articles">
+            <div class="left">
+                <article class="article">
+                    <h3 class="texts-absolute hidden-h3-absolute">Clássico</h3>
+                    <img src="assets/home/categorias/4.jpg" alt="" width="100%">
+                </article>
+                <article class="article">
+                    <h3 class="texts-absolute hidden-h3-absolute">Random</h3>
+                    <img src="assets/home/categorias/2.svg" alt="" height="100%">
+                </article>
+            </div>
+            <div class="rigth">
+                <article class="article">
+                    <h3 class="texts-absolute hidden-h3-absolute">Random</h3>
+                    <img src="assets/home/categorias/3.svg" alt="" width="100%">
+                </article>
+                <article class="article">
+                    <h3 class="texts-absolute hidden-h3-absolute">Random</h3>
+                    <img src="assets/home/categorias/2.svg" alt="" width="100%">
+                </article>
+            </div>
+            <div class="bottom">
+                <article class="article">
+                    <h3 class="texts-absolute hidden-h3-absolute">Random</h3>
+                    <img src="assets/home/categorias/4.jpg" alt="" width="100%">
+                </article>
+                <article class="article">
+                    <h3 class="texts-absolute hidden-h3-absolute">Random</h3>
+                    <img src="assets/home/categorias/3.svg" alt="" width="100%">
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="section-comunidade hidden"  id="section-comunidade">
+        <h1>Comunidade</h1>
+        <span class="span"></span>
+        <article id="o-que-e">
+            <p class="title-article-comunidade" aria-label="">O que é?</p>
+            <p class="content-article-comunidade">A aba comunidade não sei oq nao sei oq la, foi criada com o proposito de unir as pessoas de PCD sei la o que mais, amor e fé, andam lado a lado a todo momento, nem sei oq eu to escrevendo.</p>
+            <button class="btn-article-comunidade" tabindex="0">Ver mais</button>
+        </article>
+        <article id="como-participar">
+            <p class="title-article-comunidade" aria-label="">Como participar?</p>
+            <p class="content-article-comunidade">A aba comunidade não sei oq nao sei oq la, foi criada com o proposito de unir as pessoas de PCD sei la o que mais, amor e fé, andam lado a lado a todo momento, nem sei oq eu to escrevendo.</p>
+            <button class="btn-article-comunidade" tabindex="0">Ver mais</button>
+        </article>
+        <span class="span"></span>
+    </section>
+    <section id="section-chronos" class="section-chronos hidden">
+        <div class="div-chronos-header hidden">  
+            <svg class="svg-fumaca hidden" id="svg-fumaca-1" width="100%" height="719" viewBox="0 0 271 719" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_f_2586_19)">
+                <ellipse cx="-130" cy="359.5" rx="151" ry="159.5" fill="#4A4848"/>
+                </g>
+                <defs>
+                <filter id="filter0_f_2586_19" x="-431" y="0" width="702" height="719" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_2586_19"/>
+                </filter>
+                </defs>
+            </svg>
+            <h1>Chronos</h1>
+            <p>Para os gregos antigos Khrónos refere-se ao tempo cronológico, ou sequencial, que pode ser medido, associado ao movimento linear das coisas terrenas, com um princípio e um fim.</p>
+            <img src="assets/home/chronos/img-chronos.png" alt="Imagem de Chronos, deus da mitologia grega que representa o tempo cronológico" width="80%">
+        </div>
+        <div class="div-chronos-mid hidden">
+            <div class="div-img-absolute hidden" id="div-img-absolute-right">
+                <img src="assets/home/chronos/clock-right.png" alt="" width="" class="img-absolute" id="img-absolute-right">
+            </div>
+            <p>Com um propósito criativo e educativo, a ars-libri criou um departamento nomeado de <span role="text" style="font-weight: bold;">CHRONOS</span>.</p>
+            <div class="div-img-absolute hidden" id="div-img-absolute-left">
+                <img src="assets/home/chronos/clock-left.png" alt="" width="" class="img-absolute" id="img-absolute-left">
+            </div>
+        </div>
+        <div class="div-chronos-bottom hidden">
+            <p>O usuário seleciona uma data e são listadas todas as obras de maior influência e importância daquele ano escolhido.</p>
+            <p id="digital-number-2023">2023</p>
+            <button tabindex="0" id="btn-chronos">USAR AGORA!</button>
+            <div class="div-fumaca-bottom hidden" id="div-fumaca-bottom-right">
+                <svg width="202" height="612" viewBox="0 0 202 612" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_2621_27)">
+                    <circle cx="306" cy="306" r="156" fill="#4A4848"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_f_2621_27" x="0" y="0" width="612" height="612" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_2621_27"/>
+                    </filter>
+                    </defs>
+                </svg>  
+            </div>
+            <div class="div-fumaca-bottom hidden" id="div-fumaca-bottom-left">
+                <svg width="241" height="320" viewBox="0 0 241 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_2621_28)">
+                    <circle cx="-65" cy="306" r="156" fill="#4A4848"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_f_2621_28" x="-371" y="0" width="612" height="612" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_2621_28"/>
+                    </filter>
+                    </defs>
+                    </svg>
+            </div>
+        </div>
+    </section>
+    <footer class="hidden" id="footer-page"></footer>
+
+    <!-- JS LINKS -->
+    <script src="script.js" defer></script>
+</body>
+</html>

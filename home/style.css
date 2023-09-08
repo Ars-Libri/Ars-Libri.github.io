@@ -1,0 +1,734 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Variáveis de font-size, font-family, color e back-color */
+
+:root{
+    /* colors */
+
+    --black: #000000;
+    --back-color-default: #151515;
+    --back-color-text: #151515ab;
+    --secondary-color-gold: #DBC96C;
+    --text-color: #ffffff;
+    --back-card-color: #212121;
+    --back-btn-chronos: #D9D9D9;
+    --back-img-perfil-menu: #d9d9d950;
+
+    /* fonts */
+
+    --title-page-dm-serif: 'DM Serif Display', serif;
+    --title-page-montserrat:  'Montserrat', sans-serif;
+    --subtitle-page-dm-serif: 'DM Serif Display', serif;
+    --menu-item-dm-serif:'DM Serif Display', serif;
+    --title-section-montserrat: 'Montserrat', sans-serif;
+    --title-article-montserrat: 'Montserrat', sans-serif;
+    --subtitle-page-montserrat: 'Montserrat', sans-serif;
+    --menu-item-montserrat: 'Montserrat', sans-serif;
+    --content-article-montserrat:'Montserrat', sans-serif;
+    --content-menu-montserrat: 'Montserrat', sans-serif;
+    --digital-numbers: 'Digital Numbers', sans-serif;
+}
+
+/* DEFAULT STYLE */
+
+body{
+    background-color: var(--back-color-default);
+}
+button{
+    background: none;
+    border: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* MENU */
+
+nav#nav-general{
+    width: 0;
+    height: 0;
+
+    transition: 0.5s width;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: var(--back-color-default);
+    background-image: url(assets/home/menu/elipses-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+nav#nav-general h2{
+  font-family: var(--subtitle-page-montserrat);
+  font-weight: bold;
+  font-size: 12px;
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav#nav-general .menu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+
+  width: 70%;
+}
+
+nav#nav-general .menu h3{
+  font-family: var(--menu-item-montserrat);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+
+  margin-bottom: 1rem;
+}
+
+nav#nav-general .menu a{
+  padding-left: 1rem;
+
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+
+  border-radius: 10px;
+
+  font-family: var(--menu-item-montserrat);
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--text-color);
+
+  gap: 1rem;
+}
+
+nav#nav-general .menu .perfil-or-login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  /* margin-top: 1rem; */
+}
+
+nav#nav-general .menu .perfil-or-login .img-perfil{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  background-color: var(--back-img-perfil-menu);
+  border-radius: 50px;
+}
+
+nav#nav-general .menu .perfil-or-login .text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--text-color);
+
+  gap: 0.5rem;
+}
+
+nav#nav-general .menu .perfil-or-login .text #welcome{
+  text-shadow: 2px 2px var(--black);
+  font-family: var(--menu-item-montserrat);
+  font-size: 12px;
+
+  color: var(--text-color);
+}
+
+nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  text-shadow: 2px 2px var(--black);
+  font-family: var(--menu-item-montserrat);
+  font-size: 20px;
+  font-weight: bold;
+
+  padding: 0;
+  width: auto;
+  height: auto;
+
+  color: var(--text-color);
+}
+
+nav#nav-general .menu .perfil-or-login .text hr{
+  width: 100%;
+}
+
+nav#nav-general .menu .perfil-or-login .text #see-perfil{
+  text-shadow: 2px 2px var(--black);
+  font-family: var(--content-menu-montserrat);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/* HEADER STYLE */
+
+header#header-page{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    transition: 0.7s all;
+}
+header#header-page #logo-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* header#header-page #logo-header .quadrado-de-fundo{
+    transform: rotate(135deg);
+    background: linear-gradient(225deg, #ffaa00b0, #ffffff10, #151515);
+    width: 150px;
+    height: 150px;
+    margin-top: -100px;
+
+    z-index: -1;
+
+    border-radius: 10px;
+
+    position: absolute;
+} */
+header#header-page #logo-header img{
+    z-index: 1;
+}
+
+/* MAIN STYLE */
+
+main{
+    transition: 0.7s all;
+}
+
+
+/* SECTION CATEGORIA STYLE */
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    padding-block: 1rem;
+    transition: 0.7s all;
+}
+section header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-inline: 2rem;
+    padding-block: 2rem;
+}
+section header h2{
+    color: var(--text-color);
+
+    font-family: var(--title-section-montserrat);
+    font-weight: bold;
+    font-size: 30px;
+}
+section header p{
+    color: var(--text-color);
+
+    font-family: var(--menu-item-montserrat);
+    font-weight: 200;
+    font-size: 10px;
+}
+
+/**/
+
+section .category{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+section .category nav{
+    width: calc(124*4px);
+    display: flex;
+    justify-content: space-around;
+
+    padding-block: 1rem;
+}
+section .category nav button{
+    width: 110px;
+    height: 1.5rem;
+
+    border-radius: 12.5px;
+    background-color: var(--back-card-color);
+    color: var(--text-color);
+
+
+
+    transition: 0.5s all;
+}
+section .category nav button.btn-select-category{
+    background-color: var(--secondary-color-gold); 
+    color: var(--back-color-default); 
+    font-weight: 800;
+}
+
+/* */
+
+section .articles{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-bottom: 5rem;
+
+  flex-wrap: wrap;
+}
+
+section .articles .left, section .articles .rigth{
+    width: 50%;
+    height: auto;
+    padding: 1rem;
+
+    gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section .articles .bottom{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem 1rem 1rem;
+    gap: 1rem;
+}
+
+section .articles .article{
+    width: 100%;
+    height: auto;
+    background-color: var(--back-card-color);
+
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section .articles article h3{
+    font-family: var(--title-article-montserrat);
+    font-size: 15px;
+    font-weight: 700;
+
+    margin: 5% 0 0 5%;
+
+    color: var(--text-color);
+    background-color: var(--back-color-text);
+
+    padding: 0.3rem;
+    border-radius: 7px;
+
+    position: absolute;
+}
+
+.texts-absolute{
+    transition: 0.7s all;
+}
+ 
+section .articles article p{
+    font-family: var(--content-article-montserrat);
+    font-size: 12px;
+    text-align: justify;
+}
+
+/* SECTION COMUNIDADE STYLE */
+
+section#section-comunidade{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('assets/home/fundos/image 3.svg');
+    background-size: stretch;
+}
+
+section#section-comunidade span{
+    background-color: var(--secondary-color-gold);
+    width: 60px;
+    height: 5px;
+}
+
+section#section-comunidade h1{
+    font-family: var(--title-section-montserrat);
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-block: 2rem;
+
+    color: var(--text-color);
+}
+
+section#section-comunidade article{
+    width: 70vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 2rem;
+
+    border: 2px solid var(--back-card-color);
+    background-color: var(--back-color-default);
+
+    padding: 2rem;
+
+}
+
+section#section-comunidade article#o-que-e{
+    border-radius: 10px 10px 0px 0px;
+}
+section#section-comunidade article#como-participar{
+    border-radius: 0px 0px 10px 10px;
+}
+
+section#section-comunidade article p.title-article-comunidade{
+    font-family: var(--content-article-montserrat);
+    font-size: 25px;
+    font-weight: 500;
+
+    color: var(--text-color);
+}
+
+section#section-comunidade article p.content-article-comunidade{
+    font-family: var(--content-article-montserrat);
+    font-size: 16px;
+    font-weight: lighter;
+
+    color: var(--text-color);
+}
+
+section#section-comunidade article .btn-article-comunidade{
+    background-color: var(--back-color-default);
+    color: var(--secondary-color-gold);
+
+    font-family: var(--content-article-montserrat);
+    font-size: 15px;
+    font-weight: 500;
+
+    border: 2px solid var(--secondary-color-gold);
+    border-radius: 10px;
+
+    width: 117px;
+    height: 45px;
+
+    cursor: pointer;
+}
+
+/* SECTION CHRONOS STYLE */
+
+section#section-chronos{
+    display: flex;
+    flex-direction: column;
+}
+section#section-chronos .svg-fumaca{
+    position: absolute;
+}
+section#section-chronos #svg-fumaca-1{
+    margin: -200px 0px 0px 0px;
+}
+section#section-chronos .div-chronos-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-block: 3rem;
+    gap: 3rem;
+}
+section#section-chronos .div-chronos-header h1{
+    font-family: var(--title-section-montserrat);
+    font-size: 32px;
+
+    color: var(--text-color);
+}
+section#section-chronos p{
+    font-family: var(--content-menu-montserrat);
+    font-size: 20px;
+
+    color: var(--text-color);
+
+    margin-inline: 20vw;
+
+    text-align: center;
+}
+section#section-chronos .div-chronos-mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-block: 12rem;
+    gap: 3rem;
+}
+section#section-chronos .div-chronos-mid #div-img-absolute-right{
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -200px;
+}
+section#section-chronos .div-chronos-mid #div-img-absolute-left{
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+
+    margin-top: 450px;
+}
+section#section-chronos .div-chronos-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 25vh;
+    margin-bottom: 4rem;
+}
+section#section-chronos .div-chronos-bottom #digital-number-2023{
+    background-color: var(--black);
+    color: var(--text-color);
+
+    font-family: var(--digital-numbers);
+    font-size: 80px;
+
+    width: 85%;
+    padding: 1rem;
+
+    border-radius: 10px;
+
+    text-shadow: var(--text-color) 1px 0 10px;
+
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+}
+section#section-chronos .div-chronos-bottom #btn-chronos{
+    width: 80%;
+    height: 70px;
+
+    font-family: var(--menu-item-montserrat);
+
+    color: var(--black);
+    font-weight: 900;
+    font-size: 32px;
+
+    border-radius: 10px;
+
+    background-color: var(--back-btn-chronos);
+}
+section#section-chronos .div-chronos-bottom .div-fumaca-bottom{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+}
+section#section-chronos .div-chronos-bottom #div-fumaca-bottom-left{
+    margin-top: 410px;
+}
+section#section-chronos .div-chronos-bottom #div-fumaca-bottom-right{
+    justify-content: flex-end;
+
+    margin-bottom: 300px;
+}
+
+
+
+
+
+
+/* css slider */
+
+.container-slider {
+    display: flex;
+
+    width: 100%;
+
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+  
+  .container-images {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+  }
+  .slider {
+    display: none;
+    transition: display 0.7s;
+    /* position: absolute; */
+    width: 100%;
+    border-radius: 10px;
+    z-index: 0;
+
+  }
+  
+  .on {
+    display: block;
+  }
+
+  .radios-slider{
+    position: absolute;
+    z-index: 1;
+
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+  }
+  .radios-slider input:checked{
+    accent-color: var(--secondary-color-gold);
+    transition: 1s all;
+  }
+  /* .radios-slider input:focus{
+    outline: none;
+    background-color: #0440ce;
+  } */
+  
+  .control-buttons{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+
+  #prev-button, #next-button {
+    z-index: 1;
+    cursor: pointer;
+  }
+/*   #prev-button:focus, #next-button:focus{
+    outline: none;
+    background-color: #0440ce;
+  } */
+  
+  #next-button {
+    transform: rotate(180deg);
+  }
+  
+  .arrow-slide{
+    transition: 0.7s all;
+  }
+
+
+
+/* MEDIA QUERYS */
+
+/* CSS media query dentro de um stylesheet */
+/* @media (min-width: 510px) {
+    .container-slider {
+        height: 300px;
+      }
+      #prev-button, #next-button {
+        width: 8vw;
+      }
+      #prev-button{
+        margin-left: 5vw;
+      }
+      #next-button{
+        margin-left: 84.5vw;
+      }
+}
+@media (min-width: 620px) {
+    .container-slider {
+        height: 400px;
+      }
+      #prev-button, #next-button {
+        width: 6vw;
+      }
+      #prev-button{
+        margin-left: 4vw;
+      }
+      #next-button{
+        margin-left: 88vw;
+      }
+}
+@media (min-width: 800px) {
+    .container-slider {
+        height: 550px;
+      }
+      #prev-button, #next-button {
+        width: 6vw;
+      }
+      #prev-button{
+        margin-left: 4vw;
+      }
+      #next-button{
+        margin-left: 88vw;
+      }
+}
+@media (min-width: 1100px) {
+    .container-slider {
+        height: 700px;
+      }
+      #prev-button, #next-button {
+        width: 4vw;
+      }
+      #prev-button{
+        margin-left: 2vw;
+      }
+      #next-button{
+        margin-left: 92.5vw; 
+    } 
+}
+@media (min-width: 1500px) {
+    .container-slider {
+        height: 850px;
+      }
+      #prev-button, #next-button {
+        width: 3vw;
+      }
+      #prev-button{
+        margin-left: 2vw;
+      }
+      #next-button{
+        margin-left: 94vw;
+      }
+} */

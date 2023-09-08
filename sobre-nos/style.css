@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Variáveis de font-size, font-family, color e back-color */
+
+:root{
+    /* colors */
+
+    --back-color-default: #151515;
+    --secondary-color-gold: #DBC96C;
+    --text-color: #ffffff;
+    --color-footer: #D9D9D9;
+    --color-text-footer: #000000;
+    --back-card-color: #212121;
+    --color-elipse: #272727;
+
+    /* fonts */
+
+    --title-page-dm-serif: 'DM Serif Display', serif;
+    --subtitle-page-dm-serif: 'DM Serif Display', serif;
+    --menu-item-dm-serif:'DM Serif Display', serif;
+    --title-section-montserrat: 'Montserrat', sans-serif;
+    --title-article-montserrat: 'Montserrat', sans-serif;
+    --subtitle-page-montserrat: 'Montserrat', sans-serif;
+    --menu-item-montserrat: 'Montserrat', sans-serif;
+    --content-article-montserrat:'Montserrat', sans-serif;
+    --content-menu-montserrat: 'Montserrat', sans-serif;
+}
+
+/* DEFAULT STYLE */
+
+body{
+    background-color: var(--back-color-default);
+}
+button{
+    background: none;
+    border: none;
+}
+
+.hidden{
+    transition: 0.7s all;
+}
+
+/* menu style */
+
+nav#nav-general{
+    width: 0;
+    height: 0;
+
+    transition: 0.5s width;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: var(--back-color-default);
+    background-image: url(assets/home/menu/elipses-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+nav#nav-general h2{
+  font-family: var(--subtitle-page-montserrat);
+  font-weight: bold;
+  font-size: 12px;
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav#nav-general .menu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+
+  width: 70%;
+}
+
+nav#nav-general .menu h3{
+  font-family: var(--menu-item-montserrat);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+
+  margin-bottom: 1rem;
+}
+
+nav#nav-general .menu a{
+  padding-left: 1rem;
+
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+
+  border-radius: 10px;
+
+  font-family: var(--menu-item-montserrat);
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--text-color);
+
+  gap: 1rem;
+}
+
+nav#nav-general .menu .perfil-or-login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  /* margin-top: 1rem; */
+}
+
+nav#nav-general .menu .perfil-or-login .img-perfil{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  background-color: var(--back-img-perfil-menu);
+  border-radius: 50px;
+}
+
+nav#nav-general .menu .perfil-or-login .text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--text-color);
+
+  gap: 0.5rem;
+}
+
+nav#nav-general .menu .perfil-or-login .text #welcome{
+  text-shadow: 2px 2px var(--black);
+  font-family: var(--menu-item-montserrat);
+  font-size: 12px;
+
+  color: var(--text-color);
+}
+
+nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  text-shadow: 2px 2px var(--black);
+  font-family: var(--menu-item-montserrat);
+  font-size: 20px;
+  font-weight: bold;
+
+  padding: 0;
+  width: auto;
+  height: auto;
+
+  color: var(--text-color);
+}
+
+nav#nav-general .menu .perfil-or-login .text hr{
+  width: 100%;
+}
+
+nav#nav-general .menu .perfil-or-login .text #see-perfil{
+  text-shadow: 2px 2px var(--black);
+  font-family: var(--content-menu-montserrat);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* CSS HEADER */
+
+header#header-page{
+    background-image: url(../assets/sobre-nos/fundo-sobre-nos.png);
+}
+
+header#header-page .header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10vw;
+    height: 12vh;
+    
+    transition: 0.7s all;
+}
+header#header-page .header-main{
+    
+    height: 76vh;
+
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.7s all;
+}
+header#header-page .header-main .texts{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+header#header-page .header-main .texts .elipse{
+    position: absolute;
+
+    z-index: 0;
+
+    width: 12rem;
+    height: 12rem;
+    border-radius: 120px;
+    background-color: var(--color-elipse);
+}
+header#header-page .header-main h1{
+    overflow-y: hidden;
+
+    font-family: var(--title-page-dm-serif);
+    font-size: 96px;
+    line-height: 6rem;
+    font-weight: lighter;
+
+    z-index: 1;
+}
+header#header-page .header-main h2{
+    color: var(--secondary-color-gold);
+    z-index: 1;
+}
+header#header-page .header-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-inline: 10vw;
+    height: 12vh;
+
+    transition: 0.7s all;
+}
+
+/* CCS MAIN */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main header h3{
+    font-family: var(--title-page-dm-serif);
+    font-size: 40px;
+    font-weight: lighter;
+
+    color: var(--text-color);
+    background-color: var(--back-color-default);
+    padding: 1rem;
+}
+main header svg#linha-1{
+    position: absolute;
+    width: 100vw;
+
+    z-index: -1;
+}
+main .card{
+    background-color: var(--back-card-color);
+    text-align: center;
+
+    width: 80vw;
+    padding: 3rem;
+    border-radius: 10px;
+
+
+}
+main .card p{
+    color: var(--text-color);
+
+    font-family: var(--content-menu-montserrat);
+    font-size: 15px;
+
+    margin-bottom: 0.7rem;
+}
+main svg#linha-2{
+    position: relative;
+    margin-top: 6vh;
+    margin-bottom: 10vh;
+}
+
+/* CSS FOOTER */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: -5px;
+
+    height: 136px;
+
+    font-family: var(--subtitle-page-dm-serif);
+    background-color: var(--color-footer);
+    color: var(--color-text-footer);
+}
+footer h2{
+    font-size: 40px;
+    font-weight: lighter;
+}
+footer h3{
+    font-size: 20px;
+    font-weight: lighter;
+}
