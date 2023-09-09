@@ -247,7 +247,7 @@ section#section-category{
     flex-direction: column;
 
 
-    padding-block: 1rem;
+    padding-top: 1rem;
     transition: 2s all;
 }
 section#section-category header{
@@ -304,9 +304,7 @@ section#section-category nav button{
     background-color: var(--back-card-color);
     color: var(--text-color);
 
-
-
-
+    cursor: pointer;
 }
 section#section-category nav button.btn-select-category{
     background-color: var(--secondary-color-gold); 
@@ -323,17 +321,17 @@ section#section-category .articles{
   align-items: center;
   justify-content: flex-start;
 
-  margin-bottom: 5rem;
+  /* margin-bottom: 2rem; */
 
   flex-wrap: wrap;
+  row-gap: 1rem;
 }
 
 section#section-category .articles .left, section#section-category .articles .rigth{
-    width: 50%;
+    width: 50vw;
     height: auto;
-    padding: 1rem;
-
-    gap: 1rem;
+    padding-inline: 1rem;
+    row-gap: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -342,13 +340,13 @@ section#section-category .articles .left, section#section-category .articles .ri
 }
 
 section#section-category .articles .bottom{
-    width: 100%;
+    width: 100vw;
     height: auto;
+    row-gap: 1rem;
 
     display: flex;
     flex-direction: column;
     padding: 0rem 1rem 1rem 1rem;
-    gap: 1rem;
 }
 
 section#section-category .articles .article{
@@ -377,12 +375,11 @@ section#section-category .articles article h3{
 
     position: absolute;
 }
-
- 
-section#section-category .articles article p{
-    font-family: var(--content-article-montserrat);
-    font-size: 12px;
-    text-align: justify;
+section#section-category .articles article a{
+  text-decoration: none;
+  padding: 0;
+  height: auto;
+  width: auto;
 }
 
 /* SECTION COMUNIDADE STYLE */
@@ -625,23 +622,23 @@ section#section-chronos .div-chronos-bottom #div-fumaca-bottom-right{
   }
   .slider {
     display: none;
-    transition: display 0.7s;
+    opacity: 0;
+    transition: all 2s;
     /* position: absolute; */
     width: 100%;
     border-radius: 10px;
     z-index: 0;
-
   }
   
   .on {
     display: block;
+    opacity: 1;
   }
 
   .radios-slider{
     position: absolute;
     z-index: 1;
 
-    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -652,10 +649,6 @@ section#section-chronos .div-chronos-bottom #div-fumaca-bottom-right{
     accent-color: var(--secondary-color-gold);
     transition: 2s all;
   }
-  /* .radios-slider input:focus{
-    outline: none;
-    background-color: #0440ce;
-  } */
   
   .control-buttons{
     width: 100%;
@@ -682,87 +675,3 @@ section#section-chronos .div-chronos-bottom #div-fumaca-bottom-right{
   .arrow-slide{
     transition: 2s all;
   }
-
-
-
-/* MEDIA QUERYS */
-
-/* CSS media query dentro de um stylesheet */
-/* @media (min-width: 510px) {
-    .container-slider {
-        height: 300px;
-      }
-      #prev-button, #next-button {
-        width: 8vw;
-      }
-      #prev-button{
-        margin-left: 5vw;
-      }
-      #next-button{
-        margin-left: 84.5vw;
-      }
-}
-@media (min-width: 620px) {
-    .container-slider {
-        height: 400px;
-      }
-      #prev-button, #next-button {
-        width: 6vw;
-      }
-      #prev-button{
-        margin-left: 4vw;
-      }
-      #next-button{
-        margin-left: 88vw;
-      }
-}
-@media (min-width: 800px) {
-    .container-slider {
-        height: 550px;
-      }
-      #prev-button, #next-button {
-        width: 6vw;
-      }
-      #prev-button{
-        margin-left: 4vw;
-      }
-      #next-button{
-        margin-left: 88vw;
-      }
-}
-@media (min-width: 1100px) {
-    .container-slider {
-        height: 700px;
-      }
-      #prev-button, #next-button {
-        width: 4vw;
-      }
-      #prev-button{
-        margin-left: 2vw;
-      }
-      #next-button{
-        margin-left: 92.5vw; 
-    } 
-}
-@media (min-width: 1500px) {
-    .container-slider {
-        height: 850px;
-      }
-      #prev-button, #next-button {
-        width: 3vw;
-      }
-      #prev-button{
-        margin-left: 2vw;
-      }
-      #next-button{
-        margin-left: 94vw;
-      }
-} */
-/* .hidden{
-  display: none;
-}
-body{
-  background-image: url(../assets/home/menu/elipses-background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
