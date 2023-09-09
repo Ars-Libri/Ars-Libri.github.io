@@ -52,8 +52,7 @@ a{
 nav#nav-general{
     width: 0;
     height: 0;
-
-    transition: 0.5s width;
+    transition: 2s width;
 
     display: flex;
     flex-direction: column;
@@ -191,17 +190,21 @@ nav#nav-general .menu .perfil-or-login .text #see-perfil{
 
 
 /* HEADER STYLE */
+header{
+  display: flex;
+
+  transition: 2s all;
+}
 
 header#header-page{
     height: auto;
     width: auto;
-    display: flex;
     flex-direction: row;
 
     align-items: center;
     justify-content: space-around;
 
-    transition: 0.7s all;
+    transition: 2s all;
 }
 header#header-page #logo-header{
     display: flex;
@@ -228,22 +231,27 @@ header#header-page #logo-header img{
 /* MAIN STYLE */
 
 main{
-    transition: 0.7s all;
+    transition: 2s all;
 }
 
 
 /* SECTION CATEGORIA STYLE */
 
+
 section{
     display: flex;
+
+    transition: 2s all;
+}
+section#section-category{
     flex-direction: column;
-    justify-content: center;
 
 
     padding-block: 1rem;
-    transition: 0.7s all;
+    transition: 2s all;
 }
-section header{
+section#section-category header{
+  width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,14 +259,14 @@ section header{
     padding-inline: 2rem;
     padding-block: 2rem;
 }
-section header h2{
+section#section-category header h2{
     color: var(--text-color);
 
     font-family: var(--title-section-montserrat);
     font-weight: bold;
     font-size: 30px;
 }
-section header p{
+section#section-category header p{
     color: var(--text-color);
 
     font-family: var(--menu-item-montserrat);
@@ -268,20 +276,27 @@ section header p{
 
 /**/
 
-section .category{
-    display: flex;
+section#section-category{
+  width: 100vw;
+  justify-content: flex-start;
+}
+
+section#section-category .category{
+  display: flex;
     flex-direction: column;
     overflow: auto;
 }
 
-section .category nav{
-    width: calc(124*4px);
-    display: flex;
-    justify-content: space-around;
+section#section-category nav{
+  width: calc(110*4px);
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
 
-    padding-block: 1rem;
+  padding-block: 1rem;
+  padding-inline: 1rem;
 }
-section .category nav button{
+section#section-category nav button{
     width: 110px;
     height: 1.5rem;
 
@@ -291,17 +306,19 @@ section .category nav button{
 
 
 
-    transition: 0.5s all;
+
 }
-section .category nav button.btn-select-category{
+section#section-category nav button.btn-select-category{
     background-color: var(--secondary-color-gold); 
     color: var(--back-color-default); 
     font-weight: 800;
+
 }
 
 /* */
 
-section .articles{
+section#section-category .articles{
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -311,7 +328,7 @@ section .articles{
   flex-wrap: wrap;
 }
 
-section .articles .left, section .articles .rigth{
+section#section-category .articles .left, section#section-category .articles .rigth{
     width: 50%;
     height: auto;
     padding: 1rem;
@@ -324,7 +341,7 @@ section .articles .left, section .articles .rigth{
     justify-content: center;
 }
 
-section .articles .bottom{
+section#section-category .articles .bottom{
     width: 100%;
     height: auto;
 
@@ -334,7 +351,7 @@ section .articles .bottom{
     gap: 1rem;
 }
 
-section .articles .article{
+section#section-category .articles .article{
     width: 100%;
     height: auto;
     background-color: var(--back-card-color);
@@ -345,7 +362,7 @@ section .articles .article{
     flex-direction: column;
 }
 
-section .articles article h3{
+section#section-category .articles article h3{
     font-family: var(--title-article-montserrat);
     font-size: 15px;
     font-weight: 700;
@@ -361,11 +378,8 @@ section .articles article h3{
     position: absolute;
 }
 
-.texts-absolute{
-    transition: 0.7s all;
-}
  
-section .articles article p{
+section#section-category .articles article p{
     font-family: var(--content-article-montserrat);
     font-size: 12px;
     text-align: justify;
@@ -373,23 +387,24 @@ section .articles article p{
 
 /* SECTION COMUNIDADE STYLE */
 
-section#section-comunidade{
-    display: flex;
+section[name="section-comunidade"]{
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    background-image: url('assets/home/fundos/image 3.svg');
+  padding-bottom: 2rem;
+
+    background-image: url('../assets/home/fundos/backimage1.png');
     background-size: stretch;
 }
 
-section#section-comunidade span{
+section[name="section-comunidade"] span{
     background-color: var(--secondary-color-gold);
     width: 60px;
     height: 5px;
 }
 
-section#section-comunidade h1{
+section[name="section-comunidade"] h1{
     font-family: var(--title-section-montserrat);
     font-size: 30px;
     font-weight: bold;
@@ -399,7 +414,7 @@ section#section-comunidade h1{
     color: var(--text-color);
 }
 
-section#section-comunidade article{
+section[name="section-comunidade"] article{
     width: 70vw;
     height: auto;
 
@@ -417,16 +432,18 @@ section#section-comunidade article{
 
     padding: 2rem;
 
+
+
 }
 
-section#section-comunidade article#o-que-e{
+section[name="section-comunidade"] article#o-que-e{
     border-radius: 10px 10px 0px 0px;
 }
-section#section-comunidade article#como-participar{
+section[name="section-comunidade"] article#como-participar{
     border-radius: 0px 0px 10px 10px;
 }
 
-section#section-comunidade article p.title-article-comunidade{
+section[name="section-comunidade"] article p.title-article-comunidade{
     font-family: var(--content-article-montserrat);
     font-size: 25px;
     font-weight: 500;
@@ -434,7 +451,7 @@ section#section-comunidade article p.title-article-comunidade{
     color: var(--text-color);
 }
 
-section#section-comunidade article p.content-article-comunidade{
+section[name="section-comunidade"] article p.content-article-comunidade{
     font-family: var(--content-article-montserrat);
     font-size: 16px;
     font-weight: lighter;
@@ -442,7 +459,7 @@ section#section-comunidade article p.content-article-comunidade{
     color: var(--text-color);
 }
 
-section#section-comunidade article .btn-article-comunidade{
+section[name="section-comunidade"] article .btn-article-comunidade{
     background-color: var(--back-color-default);
     color: var(--secondary-color-gold);
 
@@ -462,8 +479,9 @@ section#section-comunidade article .btn-article-comunidade{
 /* SECTION CHRONOS STYLE */
 
 section#section-chronos{
-    display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 section#section-chronos .svg-fumaca{
     position: absolute;
@@ -472,6 +490,7 @@ section#section-chronos #svg-fumaca-1{
     margin: -200px 0px 0px 0px;
 }
 section#section-chronos .div-chronos-header{
+  width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -497,6 +516,7 @@ section#section-chronos p{
     text-align: center;
 }
 section#section-chronos .div-chronos-mid{
+  width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -506,6 +526,8 @@ section#section-chronos .div-chronos-mid{
     gap: 3rem;
 }
 section#section-chronos .div-chronos-mid #div-img-absolute-right{
+    z-index: -1;
+  
     width: 100vw;
     position: absolute;
     display: flex;
@@ -513,6 +535,8 @@ section#section-chronos .div-chronos-mid #div-img-absolute-right{
     margin-top: -200px;
 }
 section#section-chronos .div-chronos-mid #div-img-absolute-left{
+    z-index: -1;
+  
     width: 100vw;
     position: absolute;
     display: flex;
@@ -521,6 +545,7 @@ section#section-chronos .div-chronos-mid #div-img-absolute-left{
     margin-top: 450px;
 }
 section#section-chronos .div-chronos-bottom{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -536,8 +561,7 @@ section#section-chronos .div-chronos-bottom #digital-number-2023{
     font-family: var(--digital-numbers);
     font-size: 80px;
 
-    width: 85%;
-    padding: 1rem;
+    width: 80%;
 
     border-radius: 10px;
 
@@ -547,6 +571,8 @@ section#section-chronos .div-chronos-bottom #digital-number-2023{
     margin-bottom: 8rem;
 }
 section#section-chronos .div-chronos-bottom #btn-chronos{
+    cursor: pointer;
+    
     width: 80%;
     height: 70px;
 
@@ -624,7 +650,7 @@ section#section-chronos .div-chronos-bottom #div-fumaca-bottom-right{
   }
   .radios-slider input:checked{
     accent-color: var(--secondary-color-gold);
-    transition: 1s all;
+    transition: 2s all;
   }
   /* .radios-slider input:focus{
     outline: none;
@@ -654,7 +680,7 @@ section#section-chronos .div-chronos-bottom #div-fumaca-bottom-right{
   }
   
   .arrow-slide{
-    transition: 0.7s all;
+    transition: 2s all;
   }
 
 
@@ -731,4 +757,12 @@ section#section-chronos .div-chronos-bottom #div-fumaca-bottom-right{
       #next-button{
         margin-left: 94vw;
       }
+} */
+/* .hidden{
+  display: none;
+}
+body{
+  background-image: url(../assets/home/menu/elipses-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 } */

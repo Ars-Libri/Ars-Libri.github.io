@@ -1,29 +1,12 @@
 function openMenu(){
-  document.body.style.backgroundImage = "url('assets/home/menu/elipses-background.svg')";
+  document.body.style.backgroundImage = "url('../assets/home/menu/elipses-background.png')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
-
-  var textsAbsolute = document.getElementsByClassName('texts-absolute');
-
-  for(var i = 0;i<textsAbsolute.length;i++){
-    textsAbsolute[i].style.display = 'none';
-  }
-
-  //
-
-  var arrowsSlider = document.getElementsByClassName('arrow-slide');
-
-  for(var i = 0;i<arrowsSlider.length;i++){
-    arrowsSlider[i].style.width = '0';
-  }
-
-  //
 
   var elementsHidden = document.getElementsByClassName('hidden');
 
   for(var i = 0;i<elementsHidden.length;i++){
-    elementsHidden[i].style.width = '0';
-    elementsHidden[i].style.height = '0';
+    elementsHidden[i].style.display = 'none';
   }
 
   //
@@ -35,33 +18,19 @@ function closeMenu(){
   document.body.style.backgroundSize = "";
   document.body.style.backgroundRepeat = "";
 
-  var textsAbsolute = document.getElementsByClassName('texts-absolute');
-
-  for(var i = 0;i<textsAbsolute.length;i++){
-    textsAbsolute[i].style.display = 'block';
-  }
-
-  //
-
-  var arrowsSlider = document.getElementsByClassName('arrow-slide');
-
-  for(var i = 0;i<arrowsSlider.length;i++){
-    arrowsSlider[i].style.width = '13vw';
-  }
-
-  //
-
   var elementsHidden = document.getElementsByClassName('hidden');
 
   for(var i = 0;i<elementsHidden.length;i++){
-    elementsHidden[i].style.width = '100vw';
-    elementsHidden[i].style.height = 'auto';
+    elementsHidden[i].style.display = 'flex';
   }
 
   //
   document.getElementById('nav-general').style.width = '0';
   document.getElementById('nav-general').style.height = '0';
 }
+
+/* change color */
+
 function colorBtnNav(id){
   for(var i = 1;i<5;i++){
     if(id==i){
