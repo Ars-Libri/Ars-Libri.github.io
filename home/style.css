@@ -52,7 +52,7 @@ a{
 nav#nav-general{
     width: 0;
     height: 0;
-    transition: 2s width;
+    /* transition: 0.7s width; */
 
     display: flex;
     flex-direction: column;
