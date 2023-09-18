@@ -10,8 +10,7 @@ function openMenu(){
   }
 
   //
-  document.getElementById('nav-general').style.width = '100vw';
-  document.getElementById('nav-general').style.height = 'auto';
+  document.getElementById('nav-general').style.display = 'flex';
 }
 function closeMenu(){
   document.body.style.backgroundImage = "";
@@ -25,8 +24,7 @@ function closeMenu(){
   }
 
   //
-  document.getElementById('nav-general').style.width = '0';
-  document.getElementById('nav-general').style.height = '0';
+  document.getElementById('nav-general').style.display = 'none';
 }
 
 /* change color */
