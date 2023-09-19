@@ -303,15 +303,17 @@ section#section-category .articles{
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+
+  padding: 1rem;
 
   /* margin-bottom: 2rem; */
 
   flex-wrap: wrap; 
-  row-gap: 1rem;
+  gap: 1rem;
 }
 
-section#section-category .articles .left, section#section-category .articles .rigth{
+/* section#section-category .articles .left, section#section-category .articles .rigth{
     width: 50%;
     height: auto;
     padding-inline: 1rem;
@@ -330,16 +332,21 @@ section#section-category .articles .bottom{
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0rem 1rem 1rem 1rem;
-}
+} */
 
 section#section-category .articles .article{
-    width: 100%;
+    width: auto;
 
     border-radius: 14px;
 
     display: flex;
     flex-direction: column;
+}
+section#section-category .articles .article img{
+  border-radius: 14px;
 }
 section#section-category .articles article a{
     display: flex;
@@ -518,8 +525,6 @@ section#section-chronos .div-chronos-bottom{
 section#section-chronos .div-chronos-bottom #digital-number-2023{
     background-color: var(--black);
     color: var(--text-color);
-
-    border: 1px solid red;
 
     font-family: var(--digital-numbers);
     font-size: 80px;

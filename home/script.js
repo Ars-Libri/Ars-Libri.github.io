@@ -1,5 +1,5 @@
 function openMenu(){
-  document.body.style.backgroundImage = "url('../assets/home/menu/elipses-background.png')";
+  document.body.style.backgroundImage = "url('../assets/home/menu/elipses-background.webp')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
 
