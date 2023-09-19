@@ -1,5 +1,5 @@
 function openMenu(){
-  document.body.style.backgroundImage = "url('../assets/home/menu/elipses-background.png')";
+  document.body.style.backgroundImage = "url('../assets/home/menu/elipses-background.webp')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
   var elementsHidden = document.getElementsByClassName('hidden');
@@ -8,8 +8,7 @@ function openMenu(){
     elementsHidden[i].style.width = '0';
     elementsHidden[i].style.height = '0';
   }
-    document.getElementById('nav-general').style.width = '100vw';
-    document.getElementById('nav-general').style.height = 'auto';
+    document.getElementById('nav-general').style.display = 'flex';
 }
 function closeMenu(){
   document.body.style.backgroundImage = "";
@@ -21,6 +20,5 @@ function closeMenu(){
         elementsHidden[i].style.width = '100vw';
         elementsHidden[i].style.height = 'auto';
     }
-    document.getElementById('nav-general').style.width = '0';
-    document.getElementById('nav-general').style.height = '0';
+    document.getElementById('nav-general').style.display = 'none';
 }

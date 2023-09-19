@@ -56,19 +56,13 @@ hr{
 /* menu style */
 
 nav#nav-general{
-    width: 0;
-    height: 0;
-    transition: 2s width;
+    width: 100vw;
+    height: auto;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    /* background-color: var(--back-color-default);
-    background-image: url(assets/home/menu/elipses-background.svg);
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 nav#nav-general h2{

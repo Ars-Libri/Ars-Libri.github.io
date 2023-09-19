@@ -19,18 +19,18 @@
 <body id="body">
     <nav id="nav-general">
         <button onclick="closeMenu()">
-            <img src="../assets/home/menu/back-bottom.png" alt="">
+            <img src="../assets/home/menu/back-bottom.svg" alt="">
         </button>
         <div class="menu">
             <h3>Menu</h3>
             <div class="perfil-or-login">
                 <div class="img-perfil">
-                    <img src="../assets/home/menu/shrek.png" alt="" width="60px">
+                    <img src="../assets/home/menu/shrek.webp" alt="" width="60px">
                 </div>
                 <div class="text">
                         <p id="welcome">Bem vindo,</p>
                         <a id="name-user-or-login" href="../redirect/index.html">Fazer login
-                            <img src="../assets/home/menu/arrow-perfil.png" alt="">
+                            <img src="../assets/home/menu/arrow-perfil.svg" alt="">
                         </a>
                         <hr>
                         <p id="see-perfil">Ver meu perfil</p>
@@ -41,41 +41,72 @@
                 <img src="../assets/home/menu/arrow-perfil.png" alt="">
             </h2> -->
             <a href="../home/index.html" class="item-menu">
-                <img src="../assets/home/menu/home-icon-white.png" alt="">
+                <img src="../assets/home/menu/home-icon-white.svg" alt="">
                 Página Inicial</a>
             <a href="./index.html" class="item-menu" style="background-color: var(--secondary-color-gold); color: var(--back-color-default);">
-                <img src="../assets/home/menu/cat-icon-black.png" alt="">
+                <img src="../assets/home/menu/cat-icon-black.svg" alt="">
                 Categorias</a>
             <a href="../comunidade/index.html" class="item-menu">
-                <img src="../assets/home/menu/com-icon-white.png" alt="">
+                <img src="../assets/home/menu/com-icon-white.svg" alt="">
                 Comunidade</a>
             <a href="../chronos/index.html" class="item-menu">
-                <img src="../assets/home/menu/rolex-icon-white.png" alt="">
+                <img src="../assets/home/menu/rolex-icon-white.svg" alt="">
                 Chronos</a>
             <a href="../sobre-nos/index.html" class="item-menu">
-                <img src="../assets/home/menu/info-icon-white.png" alt="">
+                <img src="../assets/home/menu/info-icon-white.svg" alt="">
                 Sobre nós</a>
             <a href="../ajuda/index.html" class="item-menu">
-                <img src="../assets/home/menu/help-icon-white.png" alt="">
+                <img src="../assets/home/menu/help-icon-white.svg" alt="">
                 Ajuda</a>
         </div>
     </nav>
     <header id="header-page" class="header hidden" aria-hidden="false">
-        <button onclick="openMenu()">
-            <img src="../assets/categorias/menu-icon.png" alt="Ícone de 3 barras deitadas na horizontal que da acesso ao menu">
+        <button id="openMenu" onclick="openMenu()">
+            <img src="../assets/categorias/menu-icon.svg" alt="Ícone de 3 barras deitadas na horizontal que da acesso ao menu">
         </button>
+        <div class="menu-large">
+            <a href="../home/index.html" class="item-menu">
+                <img src="../assets/home/menu/home-icon-white.svg" alt="">
+                Página Inicial</a>
+            <a href="./index.html" class="item-menu" style="background-color: var(--secondary-color-gold); color: var(--back-color-default); border-radius: 14px; font-weight: bold;">
+                <img src="../assets/home/menu/cat-icon-black.svg" alt="">
+                Categorias</a>
+            <a href="../comunidade/index.html" class="item-menu">
+                <img src="../assets/home/menu/com-icon-white.svg" alt="">
+                Comunidade</a>
+            <a href="../chronos/index.html" class="item-menu">
+                <img src="../assets/home/menu/rolex-icon-white.svg" alt="">
+                Chronos</a>
+            <a href="../sobre-nos/index.html" class="item-menu">
+                <img src="../assets/home/menu/info-icon-white.svg" alt="">
+                Sobre nós</a>
+            <a href="../ajuda/index.html" class="item-menu">
+                <img src="../assets/home/menu/help-icon-white.svg" alt="">
+                Ajuda</a>
+            <div class="perfil-or-login-large">
+                <div class="img-perfil">
+                    <img src="../assets/home/menu/shrek.webp" alt="" width="60px">
+                </div>
+                <div class="text">
+                        <p id="welcome">Bem vindo,</p>
+                        <a id="name-user-or-login" href="../redirect/index.html" style="padding: 0;">Fazer login
+                            <img src="../assets/home/menu/arrow-perfil.svg" alt="">
+                        </a>
+                </div>
+            </div>
+        </div>
     </header>
     <main id="main-page" class="main hidden">
         <a href="" class="link-cat">
-            <img src="../assets/categorias/cat-arte.png" alt="">
+            <img src="../assets/categorias/cat-arte.webp" alt="Imagem com vários rostos com diversas cores e formas geométricas diferentes">
             <h2 id="title">Arte</h2>
         </a>
         <a href="" class="link-cat">
-            <img src="../assets/categorias/historia-cat.png" alt="">
+            <img src="../assets/categorias/historia-cat.webp" alt="Imagem de Dom Pedro proclamando a independência do Brasil">
             <h2 id="title">História</h2>
         </a>
         <a href="" class="link-cat">
-            <img src="../assets/categorias/literatura-cat.png" alt="">
+            <img src="../assets/categorias/literatura-cat.webp" alt="Imagem de Machado de Assis com o Rio de Janeiro de fundo">
             <h2 id="title">Literatura</h2>
         </a>
     </main>

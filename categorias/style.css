@@ -201,6 +201,55 @@ header.header{
     padding-left: 2rem;
 }
 
+header.header .menu-large{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    column-gap: 2rem;
+}
+
+header.header .menu-large a{
+    font-family: var(--menu-item-montserrat);
+
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+
+    padding: 1rem;
+}
+
+header.header .menu-large .perfil-or-login-large{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 1.5rem;
+}
+
+header.header .menu-large .perfil-or-login-large .text p{
+    color: var(--text-color);
+
+    font-family: var(--menu-item-montserrat);
+}
+
+header.header .menu-large .perfil-or-login-large .text a#name-user-or-login{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    column-gap: 0.5rem;
+}
+
+
 /* MAIN STYLE */
 
 main.main{
@@ -219,7 +268,7 @@ main.main img{
 }
 
 main.main a{
-    width: 70%;
+    width: 400px;
     background-color: var(--back-a-cat);
 
     border-radius: 20px;
@@ -239,4 +288,19 @@ main.main a h2{
     font-size: 20px;
 
     margin-block: 16px;
+}
+
+@media (max-width:450px){
+    main.main a{
+        width: 70%;
+    }
+}
+@media (min-width:1350px){
+    header.header #openMenu{
+        display: none;
+    }
+
+    header.header .menu-large{
+        display: flex;
+    }
 }
