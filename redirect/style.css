@@ -54,12 +54,9 @@ header a{
     text-decoration: none;
     text-align: center;
 }
-header img{
-    width: 100%;
-}
-@media (min-width: 360px) {
+@media (max-width: 360px) {
     header img{
-        width: 360px;
+        width: 100%;
     }       
   }
 
