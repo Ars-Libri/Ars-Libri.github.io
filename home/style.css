@@ -355,7 +355,7 @@ section[name="section-comunidade"]{
 
   padding-bottom: 2rem;
 
-    background-image: url('../assets/home/fundos/backimage1.png');
+    background-image: url('../assets/home/fundos/backimage1.webp');
     background-size: stretch;
 }
 
@@ -519,8 +519,11 @@ section#section-chronos .div-chronos-bottom #digital-number-2023{
     background-color: var(--black);
     color: var(--text-color);
 
+    border: 1px solid red;
+
     font-family: var(--digital-numbers);
     font-size: 80px;
+    text-align: center;
 
     width: 80%;
 
@@ -547,24 +550,12 @@ section#section-chronos .div-chronos-bottom #btn-chronos{
 
     background-color: var(--back-btn-chronos);
 }
-section#section-chronos .div-chronos-bottom .div-fumaca-bottom{
-    position: absolute;
-    display: flex;
-    width: 100vw;
+@media (max-width: 320px) {
+  #img-chronos{
+    width: 80%;
+    height: auto;
+  }
 }
-section#section-chronos .div-chronos-bottom #div-fumaca-bottom-left{
-    margin-top: 410px;
-}
-section#section-chronos .div-chronos-bottom #div-fumaca-bottom-right{
-    justify-content: flex-end;
-
-    margin-bottom: 300px;
-}
-
-
-
-
-
 
 /* css slider */
 
