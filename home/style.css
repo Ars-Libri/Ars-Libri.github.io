@@ -21,16 +21,16 @@
 
     /* fonts */
 
-    --title-page-dm-serif: 'DM Serif Display', serif;
-    --title-page-montserrat:  'Montserrat', sans-serif;
-    --subtitle-page-dm-serif: 'DM Serif Display', serif;
-    --menu-item-dm-serif:'DM Serif Display', serif;
-    --title-section-montserrat: 'Montserrat', sans-serif;
-    --title-article-montserrat: 'Montserrat', sans-serif;
-    --subtitle-page-montserrat: 'Montserrat', sans-serif;
-    --menu-item-montserrat: 'Montserrat', sans-serif;
-    --content-article-montserrat:'Montserrat', sans-serif;
-    --content-menu-montserrat: 'Montserrat', sans-serif;
+    --title-page-dm-serif: 'DM Serif Display', Helvetica,serif;
+    --title-page-montserrat:  'Montserrat', Helvetica, sans-serif;
+    --subtitle-page-dm-serif: 'DM Serif Display', Helvetica,serif;
+    --menu-item-dm-serif:'DM Serif Display', Helvetica,serif;
+    --title-section-montserrat: 'Montserrat', Helvetica, sans-serif;
+    --title-article-montserrat: 'Montserrat', Helvetica, sans-serif;
+    --subtitle-page-montserrat: 'Montserrat', Helvetica, sans-serif;
+    --menu-item-montserrat: 'Montserrat', Helvetica, sans-serif;
+    --content-article-montserrat:'Montserrat', Helvetica, sans-serif;
+    --content-menu-montserrat: 'Montserrat', Helvetica, sans-serif;
     --digital-numbers: 'Digital Numbers', sans-serif;
 }
 
