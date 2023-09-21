@@ -34,7 +34,7 @@
                             <img src="../assets/home/menu/arrow-perfil.svg" alt="">
                         </a>
                         <hr>
-                        <p id="see-perfil">Ver meu perfil</p>
+                        <a id="see-perfil">Ver meu perfil</a>
                 </div>
             </div>
             <!-- <hr>
@@ -62,14 +62,40 @@
         </div>
     </nav>
     <header id="header-page" class="header hidden" aria-hidden="false">
-        <button aria-label="Item 1, Botão de 3 barras que da acesso ao menu, " onclick="openMenu()" tabindex="0">
+        <button aria-label="Item 1, Botão de 3 barras que da acesso ao menu, " onclick="openMenu()" tabindex="0" id="menu-icon">
             <img src="../assets/home/header/menu.svg" alt="Botão de 3 barras que da acesso ao menu" width="30px" height="19px">
         </button>
-        <a href="./index.html" aria-label="Item 2, Botão que leva até a página inicial, " id="logo-header" tabindex="0">
-            <!-- <div class="quadrado-de-fundo" id="quadrado-de-fundo"></div> -->
-            <img src="../assets/home/header/logo-ars-libri-modern-golden-whiteback-removebg-preview 1.svg" alt="Icone de uma mão que representa a acessibilidade como logo da empresa ars libri"
-            width="99px" height="99px">
-        </a>
+        <nav class="menu-large">
+            <a href="./index.html" aria-label="Item 2, Botão que leva até a página inicial, " id="logo-header" tabindex="0">
+                <!-- <div class="quadrado-de-fundo" id="quadrado-de-fundo"></div> -->
+                <img src="../assets/home/header/logo-ars-libri-modern-golden-whiteback-removebg-preview 1.svg" alt="Icone de uma mão que representa a acessibilidade como logo da empresa ars libri"
+                width="99px" height="99px">
+            </a>
+            <a href="../index.html" class="item-menu-large" tabindex="0" style="background-color: var(--secondary-color-gold); color: var(--back-color-default); font-weight: bold;">
+                <img src="../assets/home/menu/home-icon-black.svg" alt="">
+                Página Inicial
+            </a>
+            <a href="../categorias/index.html" class="item-menu-large" tabindex="0">
+                <img src="../assets/home/menu/cat-icon-white.svg" alt="">
+                Categorias
+            </a>
+            <a href="./index.html" class="item-menu-large" tabindex="0">
+                <img src="../assets/home/menu/com-icon-white.svg" alt="">
+                Comunidade
+            </a>
+            <a href="./index.html" class="item-menu-large" tabindex="0">
+                <img src="../assets/home/menu/rolex-icon-white.svg" alt="">
+                Chronos
+            </a>
+            <a href="../sobre-nos/" class="item-menu-large" tabindex="0">
+                <img src="../assets/home/menu/info-icon-white.svg" alt="">
+                Sobre nós
+            </a>
+            <a href="./index.html" class="item-menu-large" tabindex="0">
+                <img src="../assets/home/menu/help-icon-white.svg" alt="">
+                Ajuda
+            </a>
+        </nav>
         <a href="../pesquisa/" aria-label="Item 3, Botão com icone de pesquisa para dar acesso a aba de pesquisa do site" tabindex="0">
             <img src="../assets/home/header/pesquisa.svg" alt="Ícone de lupa, da acesso a aba de pesquisa" width="30px" height="27px">
         </a>
