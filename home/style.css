@@ -21,10 +21,7 @@
 
     /* fonts */
 
-    --title-page-dm-serif: 'DM Serif Display', Helvetica,serif;
     --title-page-montserrat:  'Montserrat', Helvetica, sans-serif;
-    --subtitle-page-dm-serif: 'DM Serif Display', Helvetica,serif;
-    --menu-item-dm-serif:'DM Serif Display', Helvetica,serif;
     --title-section-montserrat: 'Montserrat', Helvetica, sans-serif;
     --title-article-montserrat: 'Montserrat', Helvetica, sans-serif;
     --subtitle-page-montserrat: 'Montserrat', Helvetica, sans-serif;
@@ -521,6 +518,7 @@ section#section-chronos .div-chronos-bottom #digital-number-2023{
     color: var(--text-color);
 
     font-family: var(--digital-numbers);
+    font-display: swap;
     font-size: 80px;
     text-align: center;
 
