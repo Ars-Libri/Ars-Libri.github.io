@@ -50,18 +50,10 @@ a{
 /* MENU */
 
 nav#nav-general{
-    
-    /* transition: 0.7s width; */
-
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    /* background-color: var(--back-color-default);
-    background-image: url(assets/home/menu/elipses-background.svg);
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 nav#nav-general h2{
@@ -98,7 +90,7 @@ nav#nav-general .menu h3{
   margin-bottom: 1rem;
 }
 
-nav#nav-general .menu a{
+nav#nav-general .menu a.item-menu{
   padding-left: 1rem;
 
   width: 100%;
@@ -123,9 +115,7 @@ nav#nav-general .menu .perfil-or-login{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-
-  /* margin-top: 1rem; */
+  column-gap: 1.5rem;
 }
 
 nav#nav-general .menu .perfil-or-login .img-perfil{
@@ -143,11 +133,11 @@ nav#nav-general .menu .perfil-or-login .img-perfil{
 nav#nav-general .menu .perfil-or-login .text{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: start;
   justify-content: center;
   color: var(--text-color);
 
-  gap: 0.5rem;
+  row-gap: 0.5rem;
 }
 
 nav#nav-general .menu .perfil-or-login .text #welcome{
@@ -162,16 +152,12 @@ nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
   display: flex;
   align-items: center;
 
-  gap: 0.7rem;
+  column-gap: 0.7rem;
 
   text-shadow: 2px 2px var(--black);
   font-family: var(--menu-item-montserrat);
   font-size: 20px;
   font-weight: bold;
-
-  padding: 0;
-  width: auto;
-  height: auto;
 
   color: var(--text-color);
 }
@@ -185,6 +171,9 @@ nav#nav-general .menu .perfil-or-login .text #see-perfil{
   font-family: var(--content-menu-montserrat);
   font-size: 12px;
   font-weight: 500;
+  
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 
@@ -196,22 +185,17 @@ header{
 }
 
 header#header-page{
-    height: auto;
-    width: auto;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: center;
-
-    column-gap: 2rem;
-
-    transition: 2s all;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
 }
-header#header-page #menu-icon{
+header#header-page #openMenu{
   display: none;
 }
 @media (max-width: 1350px){
-  header#header-page #menu-icon{
+  header#header-page #openMenu{
     display: block;
   } 
   header#header-page{
@@ -230,32 +214,41 @@ header#header-page #logo-header img{
 }
 
 header#header-page nav.menu-large{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-  column-gap: 2rem;
+    width: auto;
+    height: auto;
+
+    column-gap: 2rem;
 }
-header#header-page nav.menu-large a{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  gap: 0.5rem;
-  padding: 1rem;
-  border-radius: 12px;
-
-  color: var(--text-color);
-
+header#header-page nav.menu-large a.item-menu-large{
   font-family: var(--menu-item-montserrat);
+
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    column-gap: 0.5rem;
+
+    padding: 1rem;
 }
 
-@media (max-width: 1350px){
-  header#header-page nav.menu-large a.item-menu-large{
-    display: none;
-  } 
+@media (min-width: 1350px){
+  header#header-page{
+    padding-block: 2rem;
+  }
+  header#header-page #openMenu{
+      display: none;
+  }
+
+  header#header-page nav.menu-large{
+      display: flex;
+  }
 }
 
 /* MAIN STYLE */

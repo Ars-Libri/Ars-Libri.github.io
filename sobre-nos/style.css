@@ -47,6 +47,8 @@ hr{
     width: 100vw;
 
     margin-block: 4rem;
+
+    transition: 0s all;
 }
 
 .hidden{
@@ -56,9 +58,6 @@ hr{
 /* menu style */
 
 nav#nav-general{
-    width: 100vw;
-    height: auto;
-
     display: none;
     flex-direction: column;
     align-items: center;
@@ -99,7 +98,7 @@ nav#nav-general .menu h3{
   margin-bottom: 1rem;
 }
 
-nav#nav-general .menu a{
+nav#nav-general .menu a.item-menu{
   padding-left: 1rem;
 
   width: 100%;
@@ -124,11 +123,8 @@ nav#nav-general .menu .perfil-or-login{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-
-  /* margin-top: 1rem; */
+  column-gap: 1.5rem;
 }
-
 nav#nav-general .menu .perfil-or-login .img-perfil{
   display: flex;
   align-items: center;
@@ -144,11 +140,11 @@ nav#nav-general .menu .perfil-or-login .img-perfil{
 nav#nav-general .menu .perfil-or-login .text{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: start;
   justify-content: center;
   color: var(--text-color);
 
-  gap: 0.5rem;
+  row-gap: 0.5rem;
 }
 
 nav#nav-general .menu .perfil-or-login .text #welcome{
@@ -163,23 +159,24 @@ nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
   display: flex;
   align-items: center;
 
-  gap: 0.7rem;
+  column-gap: 0.7rem;
 
   text-shadow: 2px 2px var(--black);
+  text-decoration: none;
   font-family: var(--menu-item-montserrat);
   font-size: 20px;
   font-weight: bold;
-
-  padding: 0;
-  width: auto;
-  height: auto;
 
   color: var(--text-color);
 }
 
 nav#nav-general .menu .perfil-or-login .text hr{
   width: 100%;
-  margin-block: 0;
+
+  color: var(--text-color);
+    height: 1px;
+
+    margin-block: 0rem;
 }
 
 nav#nav-general .menu .perfil-or-login .text #see-perfil{
@@ -187,6 +184,9 @@ nav#nav-general .menu .perfil-or-login .text #see-perfil{
   font-family: var(--content-menu-montserrat);
   font-size: 12px;
   font-weight: 500;
+
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 /* CSS HEADER */

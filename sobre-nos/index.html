@@ -20,47 +20,46 @@
 </head>
 <body>
     <nav id="nav-general">
-        <button onclick="closeMenu()">
-            <img src="../assets/home/menu/back-bottom.svg" alt="">
+        <button onclick="closeMenu()" aria-label="Botão de voltar a página principal">
+            <img src="../assets/home/menu/back-bottom.svg" alt="Botão de voltar a página principal">
         </button>
         <div class="menu">
             <h3>Menu</h3>
             <div class="perfil-or-login">
                 <div class="img-perfil">
-                    <img src="../assets/home/menu/shrek.webp" alt="" width="60px">
+                    <img src="../assets/home/menu/shrek.webp" alt="" width="60px" height="60px">
                 </div>
                 <div class="text">
                         <p id="welcome">Bem vindo,</p>
-                        <a id="name-user-or-login" href="../redirect/index.html">Fazer login
-                            <img src="../assets/home/menu/arrow-perfil.svg" alt="Seta para a direita">
+                        <a id="name-user-or-login" href="../redirect/" tabindex="0">Fazer login
+                            <img src="../assets/home/menu/arrow-perfil.svg" alt="">
                         </a>
                         <hr>
-                        <p id="see-perfil">Ver meu perfil</p>
+                        <a href="../perfil/" id="see-perfil">Ver meu perfil</a>
                 </div>
             </div>
             <!-- <hr>
             <h2>VER MEU PERFIL 
                 <img src="../assets/home/menu/arrow-perfil.png" alt="">
             </h2> -->
-            <a href="../home/index.html" class="item-menu">
+            <a href="../index.html" class="item-menu" tabindex="0">
                 <img src="../assets/home/menu/home-icon-white.svg" alt="">
                 Página Inicial</a>
-            <a href="../categorias/index.html" class="item-menu">
+            <a href="../categorias/index.html" class="item-menu" tabindex="0">
                 <img src="../assets/home/menu/cat-icon-white.svg" alt="">
                 Categorias</a>
-            <a href="../comunidade/index.html" class="item-menu">
+            <a href="./index.html" class="item-menu" tabindex="0">
                 <img src="../assets/home/menu/com-icon-white.svg" alt="">
                 Comunidade</a>
-            <a href="../chronos/index.html" class="item-menu">
+            <a href="./index.html" class="item-menu" tabindex="0">
                 <img src="../assets/home/menu/rolex-icon-white.svg" alt="">
                 Chronos</a>
-            <a href="./index.html" class="item-menu" style="background-color: var(--secondary-color-gold); color: var(--back-color-default);">
+            <a href="../sobre-nos/" class="item-menu" tabindex="0" style="background-color: var(--secondary-color-gold); color: var(--back-color-default);">
                 <img src="../assets/home/menu/info-icon-black.svg" alt="">
                 Sobre nós</a>
-            <a href="../ajuda/index.html" class="item-menu">
+            <a href="./index.html" class="item-menu" tabindex="0">
                 <img src="../assets/home/menu/help-icon-white.svg" alt="">
-                Ajuda
-            </a>
+                Ajuda</a>
         </div>
     </nav>
     <header id="header-page" class="hidden">

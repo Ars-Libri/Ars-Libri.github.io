@@ -37,9 +37,10 @@
 
 body{
     background-color: var(--back-color-default);
-    background-image: url(../assets/categorias/background-cat.png);
+    background-image: url(../assets/categorias/background-cat.webp);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 button{
     background: none;
@@ -52,20 +53,13 @@ a{
 /* MENU */
 
 nav#nav-general{
-  width: 0;
-  height: 0;
+  width: 100vw;
+  height: auto;
 
-  /* transition: 2s width; */
-
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  /* background-color: var(--back-color-default);
-  background-image: url(assets/home/menu/elipses-background.svg);
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 nav#nav-general h2{
@@ -102,83 +96,77 @@ color: var(--text-color);
 margin-bottom: 1rem;
 }
 
-nav#nav-general .menu a{
-padding-left: 1rem;
-
-width: 100%;
-height: 54px;
-
-display: flex;
-align-items: center;
-
-
-border-radius: 10px;
-
-font-family: var(--menu-item-montserrat);
-font-weight: bold;
-font-size: 12px;
-text-decoration: none;
-color: var(--text-color);
-
-gap: 1rem;
-}
-
-nav#nav-general .menu .perfil-or-login{
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 1.5rem;
-
-/* margin-top: 1rem; */
-}
-
-nav#nav-general .menu .perfil-or-login .img-perfil{
-display: flex;
-align-items: center;
-justify-content: center;
-
-width: 70px;
-height: 70px;
-
-background-color: var(--back-img-perfil-menu);
-border-radius: 50px;
-}
-
-nav#nav-general .menu .perfil-or-login .text{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-color: var(--text-color);
-
-gap: 0.5rem;
-}
-
-nav#nav-general .menu .perfil-or-login .text #welcome{
-text-shadow: 2px 2px var(--black);
-font-family: var(--menu-item-montserrat);
-font-size: 12px;
-
-color: var(--text-color);
-}
-
-nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
-display: flex;
-align-items: center;
-
-gap: 0.7rem;
-
-text-shadow: 2px 2px var(--black);
-font-family: var(--menu-item-montserrat);
-font-size: 20px;
-font-weight: bold;
-
-padding: 0;
-width: auto;
-height: auto;
-
-color: var(--text-color);
-}
+nav#nav-general .menu a.item-menu{
+    padding-left: 1rem;
+  
+    width: 100%;
+    height: 54px;
+  
+    display: flex;
+    align-items: center;
+  
+  
+    border-radius: 10px;
+  
+    font-family: var(--menu-item-montserrat);
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+  
+    gap: 1rem;
+  }
+  
+  nav#nav-general .menu .perfil-or-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.5rem;
+  }
+  
+  nav#nav-general .menu .perfil-or-login .img-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 70px;
+    height: 70px;
+  
+    background-color: var(--back-img-perfil-menu);
+    border-radius: 50px;
+  }
+  
+  nav#nav-general .menu .perfil-or-login .text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: var(--text-color);
+  
+    row-gap: 0.5rem;
+  }
+  
+  nav#nav-general .menu .perfil-or-login .text #welcome{
+    text-shadow: 2px 2px var(--black);
+    font-family: var(--menu-item-montserrat);
+    font-size: 12px;
+  
+    color: var(--text-color);
+  }
+  
+  nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
+    display: flex;
+    align-items: center;
+  
+    column-gap: 0.7rem;
+  
+    text-shadow: 2px 2px var(--black);
+    font-family: var(--menu-item-montserrat);
+    font-size: 20px;
+    font-weight: bold;
+  
+    color: var(--text-color);
+  }
 
 nav#nav-general .menu .perfil-or-login .text hr{
 width: 100%;
@@ -189,6 +177,9 @@ text-shadow: 2px 2px var(--black);
 font-family: var(--content-menu-montserrat);
 font-size: 12px;
 font-weight: 500;
+
+text-decoration: none;
+color: var(--text-color);
 }
 
 
@@ -197,8 +188,9 @@ font-weight: 500;
 header.header{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     padding-block: 2rem;
-    padding-left: 2rem;
+    padding-inline: 1rem;
 }
 
 header.header .menu-large{
@@ -207,7 +199,7 @@ header.header .menu-large{
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    width: auto;
     height: auto;
 
     column-gap: 2rem;
@@ -221,34 +213,20 @@ header.header .menu-large a{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     column-gap: 0.5rem;
 
     padding: 1rem;
 }
+@media (min-width:1350px){
+    header.header #openMenu{
+        display: none;
+    }
 
-header.header .menu-large .perfil-or-login-large{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    column-gap: 1.5rem;
+    header.header .menu-large{
+        display: flex;
+    }
 }
-
-header.header .menu-large .perfil-or-login-large .text p{
-    color: var(--text-color);
-
-    font-family: var(--menu-item-montserrat);
-}
-
-header.header .menu-large .perfil-or-login-large .text a#name-user-or-login{
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    column-gap: 0.5rem;
-}
-
 
 /* MAIN STYLE */
 
@@ -293,14 +271,5 @@ main.main a h2{
 @media (max-width:450px){
     main.main a{
         width: 70%;
-    }
-}
-@media (min-width:1350px){
-    header.header #openMenu{
-        display: none;
-    }
-
-    header.header .menu-large{
-        display: flex;
     }
 }

@@ -2,6 +2,8 @@ function openMenu(){
   document.body.style.backgroundImage = "url('../assets/home/menu/elipses-background.webp')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundAttachment = "fixed";
+
   var elementsHidden = document.getElementsByClassName('hidden');
 
   for(var i = 0;i<elementsHidden.length;i++){
@@ -20,5 +22,6 @@ function closeMenu(){
         elementsHidden[i].style.width = '100vw';
         elementsHidden[i].style.height = 'auto';
     }
+
     document.getElementById('nav-general').style.display = 'none';
 }
