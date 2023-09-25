@@ -218,6 +218,18 @@ header.header .menu-large a{
 
     padding: 1rem;
 }
+
+header#header-page nav.menu-large p#p-login{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    row-gap: 0.5rem; 
+    padding: 1rem; 
+    background-color: var(--back-card-color); 
+    border-radius: 14px;
+  }
+
 @media (min-width:1350px){
     header.header #openMenu{
         display: none;

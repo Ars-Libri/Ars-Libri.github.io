@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-    <nav id="nav-general">
+    <nav id="nav-general" name="nav-general">
         <button onclick="closeMenu()" aria-label="Botão de voltar a página principal">
             <img src="../assets/home/menu/back-bottom.svg" alt="Botão de voltar a página principal">
         </button>
@@ -52,15 +52,9 @@
             <a href="./index.html" class="item-menu" tabindex="0">
                 <img src="../assets/home/menu/rolex-icon-white.svg" alt="">
                 Chronos</a>
-            <a href="../sobre-nos/" class="item-menu" tabindex="0">
-                <img src="../assets/home/menu/info-icon-white.svg" alt="">
-                Sobre nós</a>
-            <a href="./index.html" class="item-menu" tabindex="0">
-                <img src="../assets/home/menu/help-icon-white.svg" alt="">
-                Ajuda</a>
         </div>
     </nav>
-    <header id="header-page" class="header hidden" aria-hidden="false">
+    <header id="header-page" name="header-page" class="header hidden" aria-hidden="false">
         <button id="openMenu" onclick="openMenu()" name="Ícone de 3 barras deitadas na horizontal que da acesso ao menu">
             <img src="../assets/categorias/menu-icon.svg" alt="Ícone de 3 barras deitadas na horizontal que da acesso ao menu" width="30px" height="19px">
         </button>
@@ -82,13 +76,7 @@
             <a href="../chronos/index.html" class="item-menu-large">
                 <img src="../assets/home/menu/rolex-icon-white.svg" alt="">
                 Chronos</a>
-            <a href="../sobre-nos/index.html" class="item-menu-large">
-                <img src="../assets/home/menu/info-icon-white.svg" alt="">
-                Sobre nós</a>
-            <a href="../ajuda/index.html" class="item-menu-large">
-                <img src="../assets/home/menu/help-icon-white.svg" alt="">
-                Ajuda</a>
-                <p style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; row-gap: 0.5rem; padding: 1rem; background-color: var(--black); border-radius: 14px;">
+                <p id="p-login">
                     <a href="../redirect/" class="item-menu-large" tabindex="0" style="padding: 0;">
                         <img src="../assets/home/menu/shrek.webp" alt="" width="50px" height="50px">
                         Login
@@ -100,7 +88,7 @@
             <img src="../assets/home/header/pesquisa.svg" alt="Ícone de lupa, da acesso a aba de pesquisa" width="30px" height="27px">
         </a>
     </header>
-    <main id="main-page" class="hidden">
+    <main id="main-page" name="main-page" class="hidden">
             <div class="container-slider" tabindex="0" aria-label="Carrossel de imagens com 5 imagens">
                 <div class="control-buttons hidden">
                     <button id="prev-button" class="arrow-slide"><img src="./../assets/home/slider/setaSlider.svg" alt="Imagem anterior do carrossel" width="30px" height="30px"></button>
@@ -132,7 +120,7 @@
                 </div>
               </div>
     </main>
-    <section id="section-category" class="hidden" style="transition: 0s all;">
+    <section id="section-category" name="section-category" class="hidden" style="transition: 0s all;">
             <h2>Categorias</h2>
         <div class="category" aria-label="" style="transition: 0s all;">
             <nav>
@@ -175,7 +163,7 @@
                     </article>
         </div>
     </section>
-    <section name="section-comunidade" class="hidden">
+    <section id="section-comunidade" name="section-comunidade" class="hidden">
         <h1>Comunidade</h1>
         <span class="span"></span>
         <article id="o-que-e" style="transition: 0s all;">
@@ -190,7 +178,7 @@
         </article>
         <span class="span"></span>
     </section>
-    <section id="section-chronos" class="hidden">
+    <section id="section-chronos" name="section-chronos" class="hidden">
         <div class="div-chronos-header">  
             <h1>Chronos</h1>
             <p>Para os gregos antigos Khrónos refere-se ao tempo cronológico, ou sequencial, que pode ser medido, associado ao movimento linear das coisas terrenas, com um princípio e um fim.</p>
@@ -214,7 +202,7 @@
             <button tabindex="0" id="btn-chronos">USAR AGORA!</button>
         </div>
     </section>
-    <footer class="hidden" id="footer-page"></footer>
+    <footer  id="footer-page" name="footer-page" class="hidden"></footer>
 
     <!-- JS LINKS -->
     <script src="script.js" defer></script>

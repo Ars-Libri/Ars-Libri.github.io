@@ -46,14 +46,14 @@ a{
 
 /* MENU */
 
-nav#nav-general{
+nav[name="nav-general"]{
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-nav#nav-general h2{
+nav[name="nav-general"] h2{
   font-family: var(--subtitle-page-montserrat);
   font-weight: bold;
   font-size: 12px;
@@ -64,7 +64,7 @@ nav#nav-general h2{
   gap: 1rem;
 }
 
-nav#nav-general .menu{
+nav[name="nav-general"] .menu{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -78,7 +78,7 @@ nav#nav-general .menu{
   width: 70%;
 }
 
-nav#nav-general .menu h3{
+nav[name="nav-general"] .menu h3{
   font-family: var(--menu-item-montserrat);
   font-size: 30px;
   font-weight: 600;
@@ -87,7 +87,7 @@ nav#nav-general .menu h3{
   margin-bottom: 1rem;
 }
 
-nav#nav-general .menu a.item-menu{
+nav[name="nav-general"] .menu a.item-menu{
   padding-left: 1rem;
 
   width: 100%;
@@ -108,14 +108,14 @@ nav#nav-general .menu a.item-menu{
   gap: 1rem;
 }
 
-nav#nav-general .menu .perfil-or-login{
+nav[name="nav-general"] .menu .perfil-or-login{
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 1.5rem;
 }
 
-nav#nav-general .menu .perfil-or-login .img-perfil{
+nav[name="nav-general"] .menu .perfil-or-login .img-perfil{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +127,7 @@ nav#nav-general .menu .perfil-or-login .img-perfil{
   border-radius: 50px;
 }
 
-nav#nav-general .menu .perfil-or-login .text{
+nav[name="nav-general"] .menu .perfil-or-login .text{
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -137,7 +137,7 @@ nav#nav-general .menu .perfil-or-login .text{
   row-gap: 0.5rem;
 }
 
-nav#nav-general .menu .perfil-or-login .text #welcome{
+nav[name="nav-general"] .menu .perfil-or-login .text #welcome{
   text-shadow: 2px 2px var(--black);
   font-family: var(--menu-item-montserrat);
   font-size: 12px;
@@ -145,7 +145,7 @@ nav#nav-general .menu .perfil-or-login .text #welcome{
   color: var(--text-color);
 }
 
-nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
+nav[name="nav-general"] .menu .perfil-or-login .text #name-user-or-login{
   display: flex;
   align-items: center;
 
@@ -159,11 +159,11 @@ nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
   color: var(--text-color);
 }
 
-nav#nav-general .menu .perfil-or-login .text hr{
+nav[name="nav-general"] .menu .perfil-or-login .text hr{
   width: 100%;
 }
 
-nav#nav-general .menu .perfil-or-login .text #see-perfil{
+nav[name="nav-general"] .menu .perfil-or-login .text #see-perfil{
   text-shadow: 2px 2px var(--black);
   font-family: var(--content-menu-montserrat);
   font-size: 12px;
@@ -177,40 +177,38 @@ nav#nav-general .menu .perfil-or-login .text #see-perfil{
 /* HEADER STYLE */
 header{
   display: flex;
-
-  transition: 2s all;
 }
 
-header#header-page{
+header[name="header-page"]{
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding-block: 0.5rem;
   padding-inline: 1rem;
 }
-header#header-page #openMenu{
+header[name="header-page"] #openMenu{
   display: none;
 }
 @media (max-width: 1350px){
-  header#header-page #openMenu{
+  header[name="header-page"] #openMenu{
     display: block;
   } 
-  header#header-page{
+  header[name="header-page"]{
     justify-content: space-around;
     column-gap: 0rem;
   }
 }
-header#header-page #logo-header{
+header[name="header-page"] #logo-header{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header#header-page #logo-header img{
+header[name="header-page"] #logo-header img{
     z-index: 1;
 }
 
-header#header-page nav.menu-large{
+header[name="header-page"] nav.menu-large{
   display: none;
     flex-direction: row;
     align-items: center;
@@ -221,7 +219,7 @@ header#header-page nav.menu-large{
 
     column-gap: 2rem;
 }
-header#header-page nav.menu-large a.item-menu-large{
+header[name="header-page"] nav.menu-large a.item-menu-large{
   font-family: var(--menu-item-montserrat);
 
     color: var(--text-color);
@@ -234,16 +232,26 @@ header#header-page nav.menu-large a.item-menu-large{
 
     padding: 1rem;
 }
+header[name="header-page"] nav.menu-large p#p-login{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  row-gap: 0.5rem; 
+  padding: 1rem; 
+  background-color: var(--back-card-color); 
+  border-radius: 14px;
+}
 
 @media (min-width: 1350px){
-  header#header-page{
+  header[name="header-page"]{
     padding-block: 2rem;
   }
-  header#header-page #openMenu{
+  header[name="header-page"] #openMenu{
       display: none;
   }
 
-  header#header-page nav.menu-large{
+  header[name="header-page"] nav.menu-large{
       display: flex;
   }
 }
@@ -258,7 +266,7 @@ main{
 /* SECTION CATEGORIA STYLE */
 
 
-section#section-category{
+section[name="section-category"]{
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -266,7 +274,7 @@ section#section-category{
 
   transition: 2s all;
 }
-section#section-category h2{
+section[name="section-category"] h2{
   text-align: center;
     color: var(--text-color);
 
@@ -279,13 +287,13 @@ section#section-category h2{
 
 /**/
 
-section#section-category .category{
+section[name="section-category"] .category{
   display: flex;
     flex-direction: column;
     overflow: auto;
 }
 
-section#section-category nav{
+section[name="section-category"] nav{
   width: calc(110*4px);
   display: flex;
   justify-content: space-around;
@@ -294,7 +302,7 @@ section#section-category nav{
   padding-block: 1rem;
   padding-inline: 1rem;
 }
-section#section-category nav button{
+section[name="section-category"] nav button{
     width: 110px;
     height: 1.5rem;
 
@@ -304,7 +312,7 @@ section#section-category nav button{
 
     cursor: pointer;
 }
-section#section-category nav button.btn-select-category{
+section[name="section-category"] nav button.btn-select-category{
     background-color: var(--secondary-color-gold); 
     color: var(--back-color-default); 
     font-weight: 800;
@@ -313,7 +321,7 @@ section#section-category nav button.btn-select-category{
 
 /* */
 
-section#section-category .articles{
+section[name="section-category"] .articles{
   width: 100vw;
   display: flex;
   align-items: center;
@@ -327,7 +335,7 @@ section#section-category .articles{
   gap: 1rem;
 }
 
-section#section-category .articles .article{
+section[name="section-category"] .articles .article{
     width: auto;
 
     border-radius: 14px;
@@ -335,12 +343,31 @@ section#section-category .articles .article{
     display: flex;
     flex-direction: column;
 }
-section#section-category .articles .article img{
+section[name="section-category"] .articles .article img{
   border-radius: 14px;
 }
-section#section-category .articles article a{
+section[name="section-category"] .articles article a{
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 900px){
+  section[name="section-category"]{
+    justify-content: center;
+    align-items: center;
+  }
+  section[name="section-category"] .category{
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1300px){
+  section[name="section-category"] .articles{
+    width: 1200px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* SECTION COMUNIDADE STYLE */
@@ -435,20 +462,27 @@ section[name="section-comunidade"] article .btn-article-comunidade{
     cursor: pointer;
 }
 
+@media (min-width: 900px){
+  section[name="section-comunidade"] article{
+    width: 800px;
+  }
+}
+
+
 /* SECTION CHRONOS STYLE */
 
-section#section-chronos{
+section[name="section-chronos"]{
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
-section#section-chronos .svg-fumaca{
+section[name="section-chronos"] .svg-fumaca{
     position: absolute;
 }
-section#section-chronos #svg-fumaca-1{
+section[name="section-chronos"] #svg-fumaca-1{
     margin: -200px 0px 0px 0px;
 }
-section#section-chronos .div-chronos-header{
+section[name="section-chronos"] .div-chronos-header{
   width: 100vw;
     display: flex;
     flex-direction: column;
@@ -458,13 +492,13 @@ section#section-chronos .div-chronos-header{
     padding-block: 3rem;
     gap: 3rem;
 }
-section#section-chronos .div-chronos-header h1{
+section[name="section-chronos"] .div-chronos-header h1{
     font-family: var(--title-section-montserrat);
     font-size: 32px;
 
     color: var(--text-color);
 }
-section#section-chronos p{
+section[name="section-chronos"] p{
     font-family: var(--content-menu-montserrat);
     font-size: 20px;
 
@@ -474,7 +508,7 @@ section#section-chronos p{
 
     text-align: center;
 }
-section#section-chronos .div-chronos-mid{
+section[name="section-chronos"] .div-chronos-mid{
   width: 100vw;
     display: flex;
     flex-direction: column;
@@ -484,7 +518,7 @@ section#section-chronos .div-chronos-mid{
     padding-block: 12rem;
     gap: 3rem;
 }
-section#section-chronos .div-chronos-mid #div-img-absolute-right{
+section[name="section-chronos"] .div-chronos-mid #div-img-absolute-right{
     z-index: -1;
   
     width: 100vw;
@@ -493,7 +527,7 @@ section#section-chronos .div-chronos-mid #div-img-absolute-right{
     justify-content: flex-end;
     margin-top: -200px;
 }
-section#section-chronos .div-chronos-mid #div-img-absolute-left{
+section[name="section-chronos"] .div-chronos-mid #div-img-absolute-left{
     z-index: -1;
   
     width: 100vw;
@@ -503,7 +537,7 @@ section#section-chronos .div-chronos-mid #div-img-absolute-left{
 
     margin-top: 450px;
 }
-section#section-chronos .div-chronos-bottom{
+section[name="section-chronos"] .div-chronos-bottom{
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -513,7 +547,7 @@ section#section-chronos .div-chronos-bottom{
     margin-top: 25vh;
     margin-bottom: 4rem;
 }
-section#section-chronos .div-chronos-bottom #digital-number-2023{
+section[name="section-chronos"] .div-chronos-bottom #digital-number-2023{
     background-color: var(--black);
     color: var(--text-color);
 
@@ -531,7 +565,7 @@ section#section-chronos .div-chronos-bottom #digital-number-2023{
     margin-top: 4rem;
     margin-bottom: 8rem;
 }
-section#section-chronos .div-chronos-bottom #btn-chronos{
+section[name="section-chronos"] .div-chronos-bottom #btn-chronos{
     cursor: pointer;
     
     width: 80%;
@@ -554,7 +588,7 @@ section#section-chronos .div-chronos-bottom #btn-chronos{
   }
 }
 
-/* css slider */
+/* css slider - edições e coisas */
 
 .container-slider {
     display: flex;
