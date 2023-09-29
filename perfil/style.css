@@ -28,6 +28,14 @@
     --menu-item-montserrat: 'Montserrat', sans-serif;
     --content-article-montserrat:'Montserrat', sans-serif;
     --content-menu-montserrat: 'Montserrat', sans-serif;
+
+    /* font size */
+
+    --size-welcome: 12px;
+    --size-username: 20px;
+    --size-seeperfil: 12px;
+    --size-nav-item: 14px;
+    --size-exit: 20px;
 }
 
 /* DEFAULT STYLE */
@@ -44,6 +52,12 @@ body{
     align-items: center;
     justify-content: center;
 }
+@media (min-width: 700px){
+    body{
+        background-image: url(../assets/perfil/background-perfil-desktop.webp);
+    }
+}
+
 button{
     background: none;
     border: none;
@@ -91,7 +105,7 @@ main .img-perfil .background-img-perfil img{
 
 main .img-perfil #p-welcome{
     font-family: var(--content-menu-montserrat);
-    font-size: 12px;
+    font-size: var(--size-welcome);
     font-weight: 400;
 
     color: var(--text-color);
@@ -101,7 +115,7 @@ main .img-perfil #p-welcome{
 
 main .img-perfil #p-nm-user{
     font-family: var(--content-menu-montserrat);
-    font-size: 20px;
+    font-size: var(--size-username);
     font-weight: bold;
 
     color: var(--text-color);
@@ -117,9 +131,15 @@ main .img-perfil hr{
     color: var(--text-color);
 }
 
+@media (min-width: 700px){
+    main .img-perfil hr{
+        width: 400px;
+    }
+}
+
 main .img-perfil #p-see-perfil{
     font-family: var(--content-menu-montserrat);
-    font-size: 12px;
+    font-size: var(--size-seeperfil);
     font-weight: 600;
 
     color: var(--text-color);
@@ -143,7 +163,7 @@ main nav{
 
 main nav a.nav-item{
     font-family: var(--menu-item-montserrat);
-    font-size: 14px;
+    font-size: var(--size-nav-item);
     font-weight: bold;
 
     color: var(--text-color);
@@ -167,13 +187,51 @@ main .sair{
     justify-content: flex-end;
 }
 
+@media (min-width: 700px){
+    main .sair{
+        margin-top: 0px;
+        margin-right: 0px;
+
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 main .sair a{
     text-decoration: none;
     color: var(--secondary-color-gold);
 
     font-family: var(--content-menu-montserrat);
     font-weight: bold;
-    font-size: 20px;
+    font-size: var(--size-exit);
+}
+
+/* responsive text */
+
+@media (min-width: 700px){
+    :root{
+        /* font size */
+
+        --size-welcome: 16px;
+        --size-username: 24px;
+        --size-seeperfil: 16px;
+        --size-nav-item: 18px;
+        --size-exit: 24px;
+    }
+    main nav{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+
+        row-gap: 50px;
+    }
+
+    main .sair{
+        margin-top: 2rem;
+    }
 }
 
 
