@@ -344,7 +344,7 @@ main.main .articles article .header-article{
   align-items: center;
   justify-content: space-between;
 }
-main.main .articles article .header-article #a-perfil{
+main.main .articles article .header-article .a-perfil{
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -355,7 +355,7 @@ main.main .articles article .header-article #a-perfil{
   font-size: var(--size-article);
   font-weight: bold;
 }
-main.main .articles article .header-article #a-perfil #img-perfil{
+main.main .articles article .header-article .a-perfil .img-perfil{
   width: 65px;
   height: 65px;
 
@@ -446,7 +446,7 @@ main.main .articles article .footer-article #desc-article{
     flex-wrap: wrap;
     row-gap: 1rem;
   }
-  main.main .articles article .header-article #a-perfil #img-perfil{
+  main.main .articles article .header-article .a-perfil .img-perfil{
     width: 55px;
     height: 55px;
   }
