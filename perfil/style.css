@@ -52,7 +52,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-@media (min-width: 700px){
+@media (min-width: 1000px){
     body{
         background-image: url(../assets/perfil/background-perfil-desktop.webp);
     }
@@ -210,7 +210,7 @@ main .sair a{
 
 /* responsive text */
 
-@media (min-width: 700px){
+@media (min-width: 1000px){
     :root{
         /* font size */
 

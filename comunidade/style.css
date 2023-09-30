@@ -12,39 +12,39 @@
 
     --black: #000000;
     --back-color-default: #151515;
-    --back-color-text: #151515ab;
+    --color-nav-comunidade-item-select: #151515;
     --secondary-color-gold: #DBC96C;
     --text-color: #ffffff;
-    --back-card-color: #212121;
-    --back-a-cat: #D9D9D9;
-    --back-img-perfil-menu: #d9d9d950;
+    --back-btn-article: #D9D9D9;
+    --back-nav-comunidade-item: #212121;
+    --color-text-btn-article: #151515;
+    
 
     /* fonts */
 
-    --title-page-dm-serif: 'DM Serif Display', serif;
-    --subtitle-page-dm-serif: 'DM Serif Display', serif;
-    --menu-item-dm-serif:'DM Serif Display', serif;
-    --title-section-montserrat: 'Montserrat', sans-serif;
-    --title-article-montserrat: 'Montserrat', sans-serif;
-    --subtitle-page-montserrat: 'Montserrat', sans-serif;
+    
     --menu-item-montserrat: 'Montserrat', sans-serif;
-    --content-article-montserrat:'Montserrat', sans-serif;
-    --content-menu-montserrat: 'Montserrat', sans-serif;
-    --digital-numbers: 'Digital Numbers', sans-serif;
+    --nav-comunidade-item: 'Montserrat', sans-serif;
+    --text-article: 'Montserrat', sans-serif;
+
+    /* font size */
+
+    --size-nav-comunidade-item: 12px;
+    --size-article: 12px;
 }
 
 /* DEFAULT STYLE */
 
 body{
     background-color: var(--back-color-default);
-    background-image: url(../assets/categorias/background-cat.webp);
+    background-image: url(../assets/comunidade/body/bolas.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 @media (min-width: 700px){
   body{
-    background-image: url(../assets/geral/background-desktop/background-perfil-desktop-4.webp);
+    background-image: url(../assets/geral/background-desktop/background-perfil-desktop-3.webp);
   }
 }
 button{
@@ -196,7 +196,10 @@ header.header{
     justify-content: space-around;
     padding-block: 2rem;
     padding-inline: 1rem;
+
+    flex-wrap: wrap;
 }
+
 header.header #openMenu{
   cursor: pointer;
 }
@@ -234,7 +237,7 @@ header#header-page nav.menu-large p#p-login{
     align-items: flex-start; 
     row-gap: 0.5rem; 
     padding: 1rem; 
-    background-color: var(--back-card-color); 
+    background-color: var(--back-nav-comunidade-item); 
     border-radius: 14px;
   }
 
@@ -248,6 +251,56 @@ header#header-page nav.menu-large p#p-login{
     }
 }
 
+/* NAV COMUNIDADE */
+
+.nav-comunidade{
+  display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.nav-comunidade nav{
+  display: flex;
+  justify-content: center;
+
+  gap: 2rem;
+
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+@media (max-width: 330px){
+  .nav-comunidade nav{
+    width: 350px;
+  }
+}
+.nav-comunidade nav button{
+    width: 93px;
+    height: 25px;
+
+    border-radius: 12.5px;
+    background-color: var(--back-nav-comunidade-item);
+    color: var(--text-color);
+
+    font-family: var(--nav-comunidade-item);
+    font-size: var(--size-nav-comunidade-item);
+    font-weight: bold;
+
+    cursor: pointer;
+}
+.nav-comunidade nav button.btn-select-category{
+    background-color: var(--secondary-color-gold); 
+    color: var(--color-nav-comunidade-item-select);
+}
+
+@media (min-width: 700px){
+  .nav-comunidade nav button{
+    width: 110px;
+  }
+  :root{
+    --size-nav-comunidade-item: 14px;
+  }
+}
+
 /* MAIN STYLE */
 
 main.main{
@@ -256,40 +309,148 @@ main.main{
     align-items: center;
     justify-content: center;
 
-    padding-block: 3rem;
+    padding-block: 2rem;
     gap: 3rem;
+
+}
+main.main .articles{
+  width: 570px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-main.main img{
+main.main .articles article{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main.main .articles article hr{
+  width: 100%;
+  height: 2px;
+  color: var(--text-color);
+
+  margin-block: 1rem;
+}
+main.main .articles article .header-article{
+  padding: 1rem 2rem 1rem 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main.main .articles article .header-article #a-perfil{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: var(--text-color);
+
+  font-family: var(--text-article);
+  font-size: var(--size-article);
+  font-weight: bold;
+}
+main.main .articles article .header-article #a-perfil #img-perfil{
+  width: 65px;
+  height: 65px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+main.main .articles article .header-article #btn-seguir{
+  cursor: pointer;
+
+  width: 75px;
+  height: 30px;
+
+  border-radius: 50px;
+
+  background-color: var(--back-btn-article);
+  color: var(--color-text-btn-article);
+
+  font-family: var(--text-article);
+  font-size: var(--size-article);
+  font-weight: bold;
+}
+main.main .articles article .img-article{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.main .articles article .img-article img{
+  width: 570px;
+  height: 570px;
+
+  object-fit: cover;
+}
+
+main.main .articles article .footer-article{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 0.5rem 1rem 0.5rem 1rem;
+
+  gap: 0.5rem;
+}
+main.main .articles article .footer-article .icons img{
+  width: 40px;
+  height: 40px;
+}
+main.main .articles article .footer-article .icons{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main.main .articles article .footer-article #desc-article{
+  color: var(--text-color);
+
+  font-family: var(--text-article);
+  font-size: var(--size-article);
+}
+
+/* aplicando responsividade nessa área dos articles */
+@media (min-width: 570px){
+  :root{
+    --size-article: 14px;
+  }
+  main.main .articles article .header-article #btn-seguir{
+    width: 120px;
+    height: 40px;
+  }
+}
+@media (max-width: 570px){
+  main.main .articles article .img-article img{
     width: 100%;
-    border-radius: 20px 20px 0px 0px;
+    height: auto;
+  }
+  main.main .articles{
+    width: 100%;
+  }
+  main.main .articles article .footer-article .icons img{
+    width: 30px;
+    height: 30px;
+  }
+  main.main .articles article .header-article{
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+  main.main .articles article .header-article #a-perfil #img-perfil{
+    width: 55px;
+    height: 55px;
+  }
 }
 
-main.main a{
-    width: 400px;
-    background-color: var(--back-a-cat);
 
-    border-radius: 20px;
 
-    display: flex;
-    flex-direction: column;
-
-    text-align: center;
-
-    color: var(--black);
-}
-main.main a h2{
-    color: var(--black);
-
-    font-family: var(--title-article-montserrat);
-    font-weight: bold;
-    font-size: 20px;
-
-    margin-block: 16px;
-}
-
-@media (max-width:450px){
-    main.main a{
-        width: 70%;
-    }
-}
