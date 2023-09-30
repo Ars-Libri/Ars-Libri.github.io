@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Variáveis de font-size, font-family, color e back-color */
+
+:root{
+    /* colors */
+
+    --back-color-default: #151515;
+    --secondary-color-gold: #DBC96C;
+    --text-color: #ffffff;
+    --color-border-input: #d9d9d9;
+    --color-back-input: #d9d9d9;
+    --color-elipse: #d9d9d988;
+    --color-text-black: #000000;
+    --back-card-color: #212121;
+
+    /* fonts */
+
+    --title-h1: 'Montserrat', sans-serif;
+    --label-montserrat: 'Montserrat', sans-serif;
+    --content-a: 'Montserrat', sans-serif;
+    --content-btn: 'Montserrat', sans-serif;
+    --placeholder-montserrat: 'Montserrat', sans-serif;
+}
+
+/* DEFAULT STYLE */
+
+body{
+    background-color: var(--back-color-default);
+    background-image: url(../../assets/perfil/background-perfil.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 700px){
+    body{
+        background-image: url(../../assets/perfil/background-perfil-desktop.webp);
+    }
+}
+button{
+    background: none;
+    border: none;
+}
+
+/* MAIN */
+
+main{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-block: 2rem;
+    row-gap: 2rem;
+}
+
+main h1{
+    color: var(--text-color);
+    font-family: var(--title-h1);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* FORM */
+
+main form{
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+@media (min-width:900px){
+    main form{
+        width: 700px;
+    }
+}
+
+main .label-form{
+    color: var(--text-color);
+
+    font-family: var(--label-montserrat);
+    font-size: 16px;
+    font-weight: 400;
+
+    padding-block: 0.5rem;
+}
+main form input{
+    background-color: transparent;
+
+    color: var(--text-color);
+    border: 2px solid var(--color-border-input);
+    border-radius: 5px;
+
+    height: 40px;
+    width: 100%;
+    padding: 1rem;
+
+    outline: none;
+}
+main form input::placeholder{
+    font-family: var(--placeholder-montserrat);
+    font-size: 16px;
+    color: #ffffff82;
+}
+
+main form a, main form input{
+    margin-bottom: 31px;
+}
+
+/* A STYLE */
+
+main form a{
+    color: var(--text-color);
+
+    border: 2px solid var(--color-border-input);
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-family: var(--content-a);
+    font-size: 14px;
+    
+    height: 40px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-inline: 1rem;
+}
+
+/* BOTÕES CANCELAR E SALVAR */
+
+main .buttons{
+    width: 100%;
+
+    display: flex;
+    flex-direction: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+
+    margin-top: 2rem;
+}
+main .buttons a{
+    width: 50%;
+    height: 45px;
+
+    text-decoration: none;
+    color: var(--text-color);
+
+    font-family: var(--content-btn);
+    font-size: 15px;
+    font-weight: 500px;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 0;
+}
+main .buttons #btn-submit{
+    width: 50%;
+    height: 45px;
+
+    color: var(--color-text-black);
+
+    font-family: var(--content-btn);
+    font-size: 15px;
+    font-weight: bold;
+
+    background-color: var(--secondary-color-gold);
+    border-radius: 5px;
+}
+
+
+
