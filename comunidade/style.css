@@ -363,7 +363,7 @@ main.main .articles article .header-article .a-perfil .img-perfil{
 
   border-radius: 50%;
 }
-main.main .articles article .header-article #btn-seguir{
+main.main .articles article .header-article .btn-seguir{
   cursor: pointer;
 
   width: 75px;
@@ -424,7 +424,7 @@ main.main .articles article .footer-article #desc-article{
   :root{
     --size-article: 14px;
   }
-  main.main .articles article .header-article #btn-seguir{
+  main.main .articles article .header-article .btn-seguir{
     width: 120px;
     height: 40px;
   }
