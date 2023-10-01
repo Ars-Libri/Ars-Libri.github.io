@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Variáveis de font-size, font-family, color e back-color */
+
+:root{
+    /* colors */
+
+    --black: #000000;
+    --back-color-default: #151515;
+    --secondary-color-gold: #DBC96C;
+    --text-color: #ffffff;
+    --color-elipse: #d9d9d988;
+    --back-account-color: #d9d9d950;
+
+    /* fonts */
+
+    --title-h1: 'Montserrat', sans-serif;
+    --content-account: 'Montserrat', sans-serif;
+
+    /* font-size */
+
+    
+}
+
+/* DEFAULT STYLE */
+
+body{
+    background-color: var(--back-color-default);
+    background-image: url(../../../assets/perfil/background-perfil.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 700px){
+    body{
+        background-image: url(../../../assets/geral/background-desktop/background-perfil-desktop-4.webp);
+    }
+    main{
+        height: 90vh;
+    }
+}
+button{
+    background: none;
+    border: none;
+}
+
+/* MAIN */
+
+main{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-block: 2rem;
+    row-gap: 2rem;
+}
+
+
+main h1{
+    color: var(--text-color);
+    font-family: var(--title-h1);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* style contas */
+
+main a.a-conta{
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--back-account-color);
+    color: var(--text-color);
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    box-shadow: 4px 4px 4px var(--black);
+}
+@media (max-width: 280px){
+    main a.a-conta{
+        width: 95%;
+    }
+}
+@media (min-width: 600px){
+    main a.a-conta{
+        width: 500px;
+    }
+}
+main a.a-conta span.elipse-backimage{
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-elipse);
+    border-radius: 50%;
+}
+main a.a-conta span.elipse-backimage img{
+    border-radius: 50%;
+    object-fit: cover;    
+}
+main a.a-conta p.username{
+    font-family: var(--content-account);
+    font-size: 20px;
+    font-weight: bold;
+
+    text-align: center;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 2px var(--back-color-default);
+}
+
+main a.a-conta .span-seta{
+    margin-right: 1rem;
+}
+
+main a#a-adicionar-conta{
+    padding-inline: 1rem;
+    height: 85px;
+}
+
+@media (min-width: 600px){
+    main a.a-conta .span-seta{
+        margin-right: 2rem;
+    }
+    main a#a-adicionar-conta{
+        padding-inline: 2rem;
+        height: 85px;
+    }
+}
+main  a.voltar{
+    text-decoration: none;
+    color: var(--secondary-color-gold);
+
+    font-family: var(--content-account);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
