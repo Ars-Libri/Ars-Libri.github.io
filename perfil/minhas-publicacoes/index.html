@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ars Libri: Publicações, expore as publicações de artistas">
+    <title>Perfil - Publicações</title>
+
+    <!-- FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CCS LINKS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <nav id="nav-general">
+        <button onclick="closeMenu()">
+            <img src="../../../../assets/menu/back-bottom.svg" alt="" width="70px" height="74px">
+        </button>
+        <div class="menu">
+            <h3>Menu</h3>
+            <div class="perfil-or-login">
+                <div class="img-perfil">
+                    <img src="../../../../assets/menu/shrek.webp" alt="" width="60px" height="60px">
+                </div>
+                <div class="text">
+                        <p id="welcome">Bem vindo,</p>
+                        <a id="name-user-or-login" href="../../redirect/index.html">Fazer login
+                            <img src="../../../../assets/menu/arrow-perfil.svg" alt="">
+                        </a>
+                        <hr>
+                        <a href="../../perfil/" id="see-perfil">Ver meu perfil</a>
+                </div>
+            </div>
+            <!-- <hr>
+            <h2>VER MEU PERFIL 
+                <img src="../../../../assets/menu/arrow-perfil.png" alt="">
+            </h2> -->
+            <a href="../../home/" class="item-menu">
+                <img src="../../../../assets/menu/home-icon-white.svg" alt="">
+                Página Inicial</a>
+            <a href="../../categorias/" class="item-menu">
+                <img src="../../../../assets/menu/cat-icon-white.svg" alt="">
+                Categorias</a>
+            <a href="../../comunidade/" class="item-menu" style="background-color: var(--secondary-color-gold); color: var(--back-color-default);">
+                <img src="../../../../assets/menu/com-icon-black.svg" alt="">
+                Comunidade</a>
+            <a href="../../chronos/" class="item-menu">
+                <img src="../../../../assets/menu/rolex-icon-white.svg" alt="">
+                Chronos</a>
+        </div>
+    </nav>
+    <header id="header-page" class="header hidden" aria-hidden="false">
+        <button id="openMenu" onclick="openMenu()" name="Ícone de 3 barras deitadas na horizontal que da acesso ao menu">
+            <img src="../../assets/home/header/logo-ars-libri-modern-golden-whiteback-removebg-preview 1.svg" alt="Ícone de 3 barras deitadas na horizontal que da acesso ao menu" width="30px" height="19px">
+        </button>
+        <a href="./" aria-label="Item 2, Botão que leva até a página atual, " id="logo-header" tabindex="0">
+            <img src="../../assets/home/header/logo-ars-libri-modern-golden-whiteback-removebg-preview 1.svg" alt="Icone de uma mão que representa a acessibilidade como logo da empresa ars libri"
+                width="99px" height="99px">
+        </a>
+        <nav class="menu-large">
+            <a href="../../home/" class="item-menu-large">
+                <img src="../../../../assets/menu/home-icon-white.svg" alt="">
+                Página Inicial</a>
+            <a href="../../categorias/" class="item-menu-large">
+                <img src="../../../../assets/menu/cat-icon-white.svg" alt="">
+                Categorias</a>
+            <a href="../../comunidade/" class="item-menu-large" style="background-color: var(--secondary-color-gold); color: var(--back-color-default); border-radius: 14px; font-weight: bold;">
+                <img src="../../../../assets/menu/com-icon-black.svg" alt="">
+                Comunidade</a>
+            <a href="../../chronos/" class="item-menu-large">
+                <img src="../../../../assets/menu/rolex-icon-white.svg" alt="">
+                Chronos</a>
+                <p id="p-login">
+                    <a href="../../redirect/" class="item-menu-large" tabindex="0" style="padding: 0;">
+                        <img src="../../../../assets/menu/shrek.webp" alt="" width="50px" height="50px">
+                        Login
+                    </a>
+                    <a href="../../perfil/" style="padding: 0;">Ver meu perfil <img src="../../../../assets/menu/arrow-perfil.svg" alt=""></a>
+                </p>
+        </nav>
+        <a href="../../pesquisa/" aria-label="Item 3, Botão com icone de pesquisa para dar acesso a aba de pesquisa do site" tabindex="0">
+            <img src="../../assets/home/header/pesquisa.svg" alt="Ícone de lupa, da acesso a aba de pesquisa" width="30px" height="27px">
+        </a>
+    </header>
+        <div class="nav-comunidade hidden" aria-label="" style="transition: 0s all;">
+            <nav class="nav-in-page">
+                <button id="categoria-1" class="btn-select-category" onclick="colorBtnNav(1)">Recentes</button>
+                <button id="categoria-2" onclick="colorBtnNav(2)">Seguindo</button>
+                <button id="categoria-3" onclick="colorBtnNav(3)">Em alta</button>
+            </nav>
+        </div>
+    <main id="main-page" class="main hidden">
+        
+    </main>
+
+    <!-- JS LINKS -->
+    <script src="script.js" defer></script>
+</body>
+</html>
