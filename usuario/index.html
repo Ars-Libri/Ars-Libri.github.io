@@ -88,24 +88,58 @@
         
     <main id="main-page" class="main hidden">
         <header class="header-main" id="header-main">
-            <img id="back-perfil-img" src="../assets/usuario/back-usuario.png" alt="">
+            <img id="back-perfil-img" src="../assets/usuario/rickandmorty.webp" alt="">
             <span id="span-img-perfil">
                 <img id="img-perfil" src="../assets/usuario/fotodeperfil.jpg" alt="">
             </span>
             <h1 id="username">Shrek Junior</h1>
             <div class="nav-perfil hidden" aria-label="" style="transition: 0s all;">
                 <nav class="nav-in-page">
-                    <button id="categoria-1" class="btn-select-category" onclick="colorBtnNav(1)">Publicações</button>
-                    <button id="categoria-2" onclick="colorBtnNav(2)">Biografia</button>
+                    <button id="nav-item-1" class="btn-select-category" onclick="showPubli()">Publicações</button>
+                    <button id="nav-item-2"onclick="showBiografia()">Biografia</button>
                 </nav>
             </div>
         </header>
-        <div class="publicacoes-ou-biografia">
-
+        <div class="publicacoes" id="publicacoes">
+            <article class="article-publicacao">
+                <a href="./">
+                    <img src="../assets/usuario/img-card.jpg" alt="Imagem de uma torre com o céu de fundo">
+                </a>
+            </article>
+            <article class="article-publicacao">
+                <a href="./">
+                    <img src="../assets/usuario/img-card.jpg" alt="Imagem de uma torre com o céu de fundo">
+                </a>
+            </article>
+            <article class="article-publicacao">
+                <a href="./">
+                    <img src="../assets/usuario/img-card.jpg" alt="Imagem de uma torre com o céu de fundo">
+                </a>
+            </article>
+            <article class="article-publicacao">
+                <a href="./">
+                    <img src="../assets/usuario/img-card.jpg" alt="Imagem de uma torre com o céu de fundo">
+                </a>
+            </article>
+            <article class="article-publicacao">
+                <a href="./">
+                    <img src="../assets/usuario/img-card.jpg" alt="Imagem de uma torre com o céu de fundo">
+                </a>
+            </article>
+            <article class="article-publicacao">
+                <a href="./">
+                    <img src="../assets/usuario/img-card.jpg" alt="Imagem de uma torre com o céu de fundo">
+                </a>
+            </article>
+        </div>
+        <div class="biografia" id="biografia">
+            <p class="p-biografia">
+                Shrek é um ogro que vivia feliz e sozinho num pântano, em meio à floresta, em uma terra chamada Duloc. Repentinamente, ele vê sua solidão ameaçada quando o governante de Duloc, Lord Farquaad, decide expulsar todas as criaturas mágicas para floresta.
+            </p>
         </div>
     </main>
 
     <!-- JS LINKS -->
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>

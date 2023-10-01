@@ -27,12 +27,11 @@
     --text-article: 'Montserrat', sans-serif;
     --content-menu-montserrat: 'Montserrat', sans-serif;
     --title-h1: 'Montserrat', sans-serif;
+    --p-biografia: 'Montserrat', sans-serif;
 
     /* font size */
 
-    --size-nav-perfil-item: 12px;
-    --size-article: 12px;
-    --size-title-h1: 20px;
+    --size-biografia: 16px;
 }
 
 /* DEFAULT STYLE */
@@ -280,7 +279,7 @@ header#header-page nav.menu-large p#p-login{
   padding-inline: 1rem;
 }
 .nav-perfil nav button{
-    width: 93px;
+    width: 130px;
     height: 25px;
 
     border-radius: 12.5px;
@@ -330,6 +329,13 @@ main.main header.header-main{
 }
 main.main header.header-main #back-perfil-img{
   width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+@media (max-width: 400px){
+  main.main header.header-main #back-perfil-img{
+    height: 200px;
+  }
 }
 main.main header.header-main #span-img-perfil{
   margin-top: -58px;
@@ -358,5 +364,80 @@ main.main header.header-main h1#username{
 
   padding-block: 17px;
 }
+
+/* publicacoes style */
+
+main.main div.publicacoes{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  flex-wrap: wrap; 
+  gap: 1rem;
+}
+
+main.main div.publicacoes .article-publicacao{
+    width: 100%;
+
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+}
+main.main div.publicacoes .article-publicacao img{
+  width: 100%;
+  border-radius: 14px;
+}
+
+main.main div.biografia{
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--p-biografia);
+  font-size: var(--size-biografia);
+  font-weight: 600px;
+  line-height: 25px;
+
+  padding: 2rem 3rem 2rem 3rem;
+
+  color: var(--text-color);
+
+  text-align: center;
+}
+@media (min-width: 270px){
+  main.main div.publicacoes .article-publicacao img{
+    width: 270px;
+  }
+  main.main div.publicacoes .article-publicacao{
+    width: 270px;
+  }
+}
+@media (min-width: 900px){
+  :root{
+    --size-biografia: 20px;
+  }
+  main.main header.header-main{
+    width: 900px;
+  }
+  main.main div.publicacoes{
+    width: 900px;
+  }
+  main.main div.biografia{
+    width: 900px;
+    padding: 3rem;
+    padding-inline: 10rem;
+  }
+  main.main header.header-main #back-perfil-img{
+    border-radius: 20px;
+    height: 300px;
+
+    object-fit: cover;
+  }
+}
+
 
 

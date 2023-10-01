@@ -30,14 +30,24 @@ function openMenu(){
 
   /* change color */
 
-function colorBtnNav(id){
-  for(var i = 1;i<5;i++){
-    if(id==i){
-      var element = document.getElementById("categoria-"+i);
-      element.classList.add('btn-select-category');
-    } else{
-      var element = document.getElementById("categoria-"+i);
-      element.classList.remove('btn-select-category');
-    }
-  }
+function showPubli(){
+  var element1 = document.getElementById("nav-item-1");
+  element1.classList.add('btn-select-category');
+  var element2 = document.getElementById("nav-item-2");
+  element2.classList.remove('btn-select-category');
+
+  document.getElementById('publicacoes').style.display = 'flex';
+  document.getElementById('biografia').style.display = 'none';
 }
+
+function showBiografia(){
+  var element1 = document.getElementById("nav-item-1");
+  element1.classList.remove('btn-select-category');
+  var element2 = document.getElementById("nav-item-2");
+  element2.classList.add('btn-select-category');
+
+  document.getElementById('publicacoes').style.display = 'none';
+  document.getElementById('biografia').style.display = 'flex';
+}
+
+
