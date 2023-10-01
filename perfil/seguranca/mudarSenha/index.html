@@ -22,13 +22,15 @@
     <main>
         
         <h1>Segurança</h1>
-        <h2>Mudar email</h2>
+        <h2>Mudar senha</h2>
         
         <form action="" method="post">
-            <label class="label-form" for="edit-name">Email atual:</label>
-            <input type="text" id="edit-name" name="edit-name" placeholder="" required minlength="4" value="Email atual">
-            <label for="new-email" class="label-form">Email novo:</label>
-            <input type="email" name="new-email" id="new-email" placeholder="Ex.: ars.libri.contato@gmail.com" required minlength="4">
+            <label class="label-form" for="senha-atual">Senha atual:</label>
+            <input type="password" id="senha-atual" name="senha-atual" placeholder="Digite a senha atual" required minlength="4" value="">
+            <label for="new-password" class="label-form">Nova senha:</label>
+            <input type="password" name="new-password" id="new-password" placeholder="Digite a nova senha:"minlength="4" required>
+            <label for="new-password-comparate" class="label-form">Nova senha novamente:</label>
+            <input type="password" name="new-password-comparate" id="new-password-comparate" placeholder="Digite novamente:" minlength="4" required>
             <div class="buttons">
                 <a href="../">Cancelar</a>
                 <button type="submit" id="btn-submit" name="btn-submit">Alterar</button>

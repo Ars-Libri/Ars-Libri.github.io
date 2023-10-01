@@ -22,6 +22,7 @@
     /* fonts */
 
     --title-h1: 'Montserrat', sans-serif;
+    --title-h2: 'Montserrat', sans-serif;
     --label-montserrat: 'Montserrat', sans-serif;
     --content-a: 'Montserrat', sans-serif;
     --content-btn: 'Montserrat', sans-serif;
@@ -29,14 +30,15 @@
 
     /* font-size */
 
-    --size-forms: 16px;
+    --size-placeholder: 16px;
+    --size-label-buttons: 16px;
 }
 
 /* DEFAULT STYLE */
 
 body{
     background-color: var(--back-color-default);
-    background-image: url(../../assets/perfil/background-perfil.webp);
+    background-image: url(../../../assets/perfil/background-perfil.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -48,7 +50,7 @@ body{
 }
 @media (min-width: 700px){
     body{
-        background-image: url(../../assets/perfil/background-perfil-desktop.webp);
+        background-image: url(../../../assets/geral/background-desktop/background-perfil-desktop-4.webp);
     }
 }
 button{
@@ -60,6 +62,7 @@ button{
 
 main{
     width: 100%;
+    height: 80vh;
 
     display: flex;
     flex-direction: column;
@@ -70,11 +73,18 @@ main{
     row-gap: 2rem;
 }
 
+
 main h1{
     color: var(--text-color);
     font-family: var(--title-h1);
     font-size: 32px;
     font-weight: 600;
+}
+
+main h2{
+    font-family: var(--title-h2);
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 /* FORM */
@@ -88,9 +98,9 @@ main form{
     justify-content: center;
 }
 
-@media (min-width:900px){
+@media (min-width:700px){
     main form{
-        width: 700px;
+        width: 500px;
     }
 }
 
@@ -98,7 +108,7 @@ main .label-form{
     color: var(--text-color);
 
     font-family: var(--label-montserrat);
-    font-size: 16px;
+    font-size: var(--size-label-buttons);
     font-weight: 400;
 
     padding-block: 0.5rem;
@@ -111,7 +121,7 @@ main form input{
     border-radius: 5px;
 
     font-family: var(--placeholder-montserrat);
-    font-size: var(--size-forms);
+    font-size: var(--size-placeholder);
 
     height: 40px;
     width: 100%;
@@ -119,36 +129,19 @@ main form input{
 
     outline: none;
 }
+@media (min-width: 700px){
+    main form input{
+        width: 500px;
+    }
+}
 main form input::placeholder{
     font-family: var(--placeholder-montserrat);
-    font-size: var(--size-forms);
+    font-size: var(--size-placeholder);
     color: #ffffff82;
 }
 
-main form a, main form input{
+main form input{
     margin-bottom: 31px;
-}
-
-/* A STYLE */
-
-main form a{
-    color: var(--text-color);
-
-    border: 2px solid var(--color-border-input);
-    border-radius: 5px;
-
-    text-decoration: none;
-    font-family: var(--content-a);
-    font-size: var(--size-forms);
-    
-    height: 40px;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding-inline: 1rem;
 }
 
 /* BOTÕES CANCELAR E SALVAR */
@@ -171,11 +164,11 @@ main .buttons a{
     text-decoration: none;
     color: var(--text-color);
 
-    font-family: var(--content-btn);
-    font-size: var(--size-forms);
-    font-weight: 500px;
 
-    border: 0px;
+
+    font-family: var(--content-btn);
+    font-size: var(--size-label-buttons);
+    font-weight: 500px;
 
     text-align: center;
     display: flex;
@@ -186,23 +179,32 @@ main .buttons a{
 }
 main .buttons #btn-submit{
     cursor: pointer;
-
+    
     width: 50%;
     height: 45px;
 
     color: var(--color-text-black);
 
     font-family: var(--content-btn);
-    font-size: var(--size-forms);
+    font-size: var(--size-label-buttons);
     font-weight: bold;
 
     background-color: var(--secondary-color-gold);
     border-radius: 5px;
 }
 
+/* font size desktop */
+
 @media (min-width: 700px){
     :root{
-        --size-forms: 18px;
+        --size-placeholder: 18px;
+        --size-label-buttons: 18px;
+    }
+    main .buttons #btn-submit{
+        height: 60px;
+    }
+    main form input{
+        height: 50px;
     }
 }
 

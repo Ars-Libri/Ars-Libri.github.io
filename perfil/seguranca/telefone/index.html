@@ -22,18 +22,17 @@
     <main>
         
         <h1>Segurança</h1>
-        <h2>Mudar email</h2>
+        <h2>Adicionar telefone</h2>
         
         <form action="" method="post">
-            <label class="label-form" for="edit-name">Email atual:</label>
-            <input type="text" id="edit-name" name="edit-name" placeholder="" required minlength="4" value="Email atual">
-            <label for="new-email" class="label-form">Email novo:</label>
-            <input type="email" name="new-email" id="new-email" placeholder="Ex.: ars.libri.contato@gmail.com" required minlength="4">
+            <label class="label-form" for="tel-celular">Telefone:</label>
+            <input type="tel" id="tel-celular" name="tel-celular" maxlength="15" onkeyup="handlePhone(event)" required>
             <div class="buttons">
                 <a href="../">Cancelar</a>
-                <button type="submit" id="btn-submit" name="btn-submit">Alterar</button>
+                <button type="submit" id="btn-submit" name="btn-submit">Adicionar</button>
             </div>
         </form>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

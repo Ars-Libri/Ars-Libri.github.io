@@ -5,7 +5,7 @@
     overflow-x: hidden;
 }
 
-/* Variáveis de font-size, font-family, color e back-color */
+/* Variáveis de font-size, var(--size-document)-family, color e back-color */
 
 :root{
     /* colors */
@@ -25,6 +25,10 @@
     --label-montserrat: 'Montserrat', sans-serif;
     --content-menu-montserrat: 'Montserrat', sans-serif;
     --placeholder-montserrat: 'Montserrat', sans-serif;
+
+    /* font size */
+
+    --size-document: 16px;
 }
 
 /* DEFAULT STYLE */
@@ -93,7 +97,7 @@ main .img-perfil .background-img-perfil img{
 
 main .img-perfil #a-change-img{
     font-family: var(--content-menu-montserrat);
-    font-size: 14px;
+    font-size: var(--size-document);
     font-weight: 500;
 
     color: var(--text-color);
@@ -122,7 +126,7 @@ main .label-form{
     color: var(--text-color);
 
     font-family: var(--label-montserrat);
-    font-size: 14px;
+    font-size: var(--size-document);
     font-weight: 400;
 
     padding-block: 0.5rem;
@@ -142,7 +146,7 @@ main form input{
 }
 main form input::placeholder, main form textarea::placeholder{
     font-family: var(--placeholder-montserrat);
-    font-size: 14px;
+    font-size: var(--size-document);
     color: #ffffff82;
 }
 main form textarea{
@@ -175,7 +179,7 @@ main form .genero-e-dtnasc select, main form .genero-e-dtnasc input{
     color: var(--color-text-black);
 
     font-family: var(--placeholder-montserrat);
-    font-size: 14px;
+    font-size: var(--size-document);
     font-weight: bold;
 
     width: 100%;
@@ -220,7 +224,7 @@ main .buttons a{
     color: var(--text-color);
 
     font-family: var(--content-menu-montserrat);
-    font-size: 15px;
+    font-size: var(--size-document);
     font-weight: 500px;
 
     text-align: center;
@@ -229,17 +233,25 @@ main .buttons a{
     justify-content: center;
 }
 main .buttons #btn-submit{
+    cursor: pointer;
+
     width: 50%;
     height: 45px;
 
     color: var(--color-text-black);
 
     font-family: var(--content-menu-montserrat);
-    font-size: 15px;
+    font-size: var(--size-document);
     font-weight: bold;
 
     background-color: var(--secondary-color-gold);
     border-radius: 5px;
+}
+
+@media (min-width: 700px){
+    :root{
+        --size-document: 18px;
+    }
 }
 
 
