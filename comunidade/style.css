@@ -26,6 +26,7 @@
     --menu-item-montserrat: 'Montserrat', sans-serif;
     --nav-comunidade-item: 'Montserrat', sans-serif;
     --text-article: 'Montserrat', sans-serif;
+    --content-menu-montserrat: 'Montserrat', sans-serif;
 
     /* font size */
 
@@ -172,6 +173,11 @@ nav#nav-general .menu a.item-menu{
   
     color: var(--text-color);
   }
+@media(max-width: 350px){
+  nav#nav-general .menu .perfil-or-login .text #name-user-or-login{
+    font-size: 14px;
+  }
+}
 
 nav#nav-general .menu .perfil-or-login .text hr{
 width: 100%;

@@ -17,18 +17,18 @@
 <body id="body">
     <nav id="nav-general">
         <button onclick="closeMenu()">
-            <img src="../../../../assets/menu/back-bottom.svg" alt="" width="70px" height="74px">
+            <img src="../../assets/menu/back-bottom.svg" alt="" width="70px" height="74px">
         </button>
         <div class="menu">
             <h3>Menu</h3>
             <div class="perfil-or-login">
                 <div class="img-perfil">
-                    <img src="../../../../assets/menu/shrek.webp" alt="" width="60px" height="60px">
+                    <img src="../../assets/menu/shrek.webp" alt="" width="60px" height="60px">
                 </div>
                 <div class="text">
                         <p id="welcome">Bem vindo,</p>
                         <a id="name-user-or-login" href="../../redirect/index.html">Fazer login
-                            <img src="../../../../assets/menu/arrow-perfil.svg" alt="">
+                            <img src="../../assets/menu/arrow-perfil.svg" alt="">
                         </a>
                         <hr>
                         <a href="../../perfil/" id="see-perfil">Ver meu perfil</a>
@@ -36,25 +36,25 @@
             </div>
             <!-- <hr>
             <h2>VER MEU PERFIL 
-                <img src="../../../../assets/menu/arrow-perfil.png" alt="">
+                <img src="../../assets/menu/arrow-perfil.png" alt="">
             </h2> -->
             <a href="../../home/" class="item-menu">
-                <img src="../../../../assets/menu/home-icon-white.svg" alt="">
+                <img src="../../assets/menu/home-icon-white.svg" alt="">
                 Página Inicial</a>
             <a href="../../categorias/" class="item-menu">
-                <img src="../../../../assets/menu/cat-icon-white.svg" alt="">
+                <img src="../../assets/menu/cat-icon-white.svg" alt="">
                 Categorias</a>
             <a href="../../comunidade/" class="item-menu" style="background-color: var(--secondary-color-gold); color: var(--back-color-default);">
-                <img src="../../../../assets/menu/com-icon-black.svg" alt="">
+                <img src="../../assets/menu/com-icon-black.svg" alt="">
                 Comunidade</a>
             <a href="../../chronos/" class="item-menu">
-                <img src="../../../../assets/menu/rolex-icon-white.svg" alt="">
+                <img src="../../assets/menu/rolex-icon-white.svg" alt="">
                 Chronos</a>
         </div>
     </nav>
     <header id="header-page" class="header hidden" aria-hidden="false">
         <button id="openMenu" onclick="openMenu()" name="Ícone de 3 barras deitadas na horizontal que da acesso ao menu">
-            <img src="../../assets/home/header/logo-ars-libri-modern-golden-whiteback-removebg-preview 1.svg" alt="Ícone de 3 barras deitadas na horizontal que da acesso ao menu" width="30px" height="19px">
+            <img src="../../assets/home/header/menu.svg" alt="Ícone de 3 barras deitadas na horizontal que da acesso ao menu" width="30px" height="19px">
         </button>
         <a href="./" aria-label="Item 2, Botão que leva até a página atual, " id="logo-header" tabindex="0">
             <img src="../../assets/home/header/logo-ars-libri-modern-golden-whiteback-removebg-preview 1.svg" alt="Icone de uma mão que representa a acessibilidade como logo da empresa ars libri"
@@ -62,38 +62,47 @@
         </a>
         <nav class="menu-large">
             <a href="../../home/" class="item-menu-large">
-                <img src="../../../../assets/menu/home-icon-white.svg" alt="">
+                <img src="../../assets/menu/home-icon-white.svg" alt="">
                 Página Inicial</a>
             <a href="../../categorias/" class="item-menu-large">
-                <img src="../../../../assets/menu/cat-icon-white.svg" alt="">
+                <img src="../../assets/menu/cat-icon-white.svg" alt="">
                 Categorias</a>
             <a href="../../comunidade/" class="item-menu-large" style="background-color: var(--secondary-color-gold); color: var(--back-color-default); border-radius: 14px; font-weight: bold;">
-                <img src="../../../../assets/menu/com-icon-black.svg" alt="">
+                <img src="../../assets/menu/com-icon-black.svg" alt="">
                 Comunidade</a>
             <a href="../../chronos/" class="item-menu-large">
-                <img src="../../../../assets/menu/rolex-icon-white.svg" alt="">
+                <img src="../../assets/menu/rolex-icon-white.svg" alt="">
                 Chronos</a>
                 <p id="p-login">
                     <a href="../../redirect/" class="item-menu-large" tabindex="0" style="padding: 0;">
-                        <img src="../../../../assets/menu/shrek.webp" alt="" width="50px" height="50px">
+                        <img src="../../assets/menu/shrek.webp" alt="" width="50px" height="50px">
                         Login
                     </a>
-                    <a href="../../perfil/" style="padding: 0;">Ver meu perfil <img src="../../../../assets/menu/arrow-perfil.svg" alt=""></a>
+                    <a href="../../perfil/" style="padding: 0;">Ver meu perfil <img src="../../assets/menu/arrow-perfil.svg" alt=""></a>
                 </p>
         </nav>
         <a href="../../pesquisa/" aria-label="Item 3, Botão com icone de pesquisa para dar acesso a aba de pesquisa do site" tabindex="0">
             <img src="../../assets/home/header/pesquisa.svg" alt="Ícone de lupa, da acesso a aba de pesquisa" width="30px" height="27px">
         </a>
     </header>
-        <div class="nav-comunidade hidden" aria-label="" style="transition: 0s all;">
-            <nav class="nav-in-page">
-                <button id="categoria-1" class="btn-select-category" onclick="colorBtnNav(1)">Recentes</button>
-                <button id="categoria-2" onclick="colorBtnNav(2)">Seguindo</button>
-                <button id="categoria-3" onclick="colorBtnNav(3)">Em alta</button>
-            </nav>
-        </div>
-    <main id="main-page" class="main hidden">
         
+    <main id="main-page" class="main hidden">
+        <header class="header-main" id="header-main">
+            <img id="back-perfil-img" src="../assets/usuario/back-usuario.png" alt="">
+            <span id="span-img-perfil">
+                <img id="img-perfil" src="../assets/usuario/fotodeperfil.jpg" alt="">
+            </span>
+            <h1 id="username">Shrek Junior</h1>
+            <div class="nav-perfil hidden" aria-label="" style="transition: 0s all;">
+                <nav class="nav-in-page">
+                    <button id="categoria-1" class="btn-select-category" onclick="colorBtnNav(1)">Publicações</button>
+                    <button id="categoria-2" onclick="colorBtnNav(2)">Biografia</button>
+                </nav>
+            </div>
+        </header>
+        <div class="publicacoes-ou-biografia">
+
+        </div>
     </main>
 
     <!-- JS LINKS -->
