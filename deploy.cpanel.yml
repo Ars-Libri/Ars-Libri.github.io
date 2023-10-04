@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/arslib78/public_html/
-    - /bin/cp -R images $DEPLOYPATH
+    - /home2/arslib78/repositories/ -R ars-librihub.io.git $DEPLOYPATH
